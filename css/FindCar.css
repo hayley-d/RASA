@@ -1,0 +1,625 @@
+body{
+    background-color: black;
+
+    font-family: "Montserrat", sans-serif;
+
+}
+
+a{
+    text-decoration: none;
+    color: inherit;
+}
+
+/*Content area*/
+.content{
+    width:100%;
+    height: fit-content;
+    background-color: black;
+    align-items: center;
+    justify-content: center;
+    display: block;
+    padding:10px;
+    padding-bottom: 50px;
+}
+
+
+
+.displayImg{
+    background-image: url("../img/HomePage.JPG");
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: auto;
+    height: 428px;
+    margin-bottom: 10px;
+
+}
+
+.find-container {
+    width:50%;
+    margin-left:25%;
+    margin-right:25%;
+    margin-top:5%;
+    display: grid;
+    grid-template-areas: "left right";
+    max-width: 850px;
+}
+
+.left-container {
+    background: #807182;
+    background-image: url("../img/findCarForm.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow: hidden;
+    padding: 40px 0 0 0;
+    position: relative;
+    text-align: center;
+    width: 300px;
+    border-radius: 5px;
+}
+
+.right-container {
+    background: #191717;
+    display: grid;
+    grid-template-areas: "." ".";
+    width: 500px;
+    border-radius: 5px;
+
+   /* box-shadow: 0 0px 8px 6px grey;*/
+}
+
+.right-container h1:nth-of-type(1) {
+    color: rgba(0, 0, 0, .8);
+    font-size: 28px;
+    font-weight: 600;
+    color: white;
+    text-align: center;
+}
+
+.right-container .set {
+    display: flex;
+    gap:50px;
+
+    /*justify-content: center;*/
+    margin: 10px 0;
+}
+
+.right-container select {
+    border: 1px solid rgba(0, 0, 0, .1);
+    border-radius: 4px;
+    height: 38px;
+    line-height: 38px;
+    padding-left: 5px;
+    width:190px;
+    color: #666666;
+    font-family: "Montserrat", sans-serif;
+    font-weight: bold;
+}
+
+select option{
+    font-family: "Montserrat", sans-serif;
+    font-weight: bold;
+}
+
+.right-container label {
+    color: white;
+    margin-top:5px;
+}
+
+.right-container header {
+    padding: 40px;
+}
+
+
+.right-container .pets-weight .radio-container {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+.right-container footer {
+    align-items: center;
+    background: #191717;
+    display: grid;
+    padding: 5px 40px;
+    align-content: center;
+    justify-content: center;
+    width: 400px;
+    height:90px;
+
+}
+.right-container footer button {
+    border: 1px solid rgba(0, 0, 0, .2);
+    height: 38px;
+    line-height: 38px;
+    width: 100px;
+    border-radius: 19px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.right-container footer #next {
+    background: red;
+    border: 1px solid transparent;
+    color: #fff;
+    font-size: 16px;
+
+}
+.right-container footer #next:hover {
+    background: white;
+    color: #191717;
+    cursor: pointer;
+}
+.price-range label, .body-type label, .drive-type label, .door-num label, .transmission-type label, .pets-weight label .fuel-type label{
+    display: block;
+    margin-bottom: 5px;
+    margin-top:10px;
+}
+
+.radio-container {
+    background: red;
+    border: 1px solid rgba(0, 0, 0, .1);
+    border-radius: 4px;
+    display: flex;
+    gap:10px;
+    padding: 5px;
+    width:180px;
+}
+
+.fuel-type > .radio-container {
+    background: red;
+    border: 1px solid rgba(0, 0, 0, .1);
+    border-radius: 4px;
+    display: flex;
+    gap:10px;
+    padding: 5px;
+    width:400px;
+}
+
+.radio-container label {
+    background: transparent;
+    border: 1px solid transparent;
+    border-radius: 2px;
+    display: inline-block;
+    height: 26px;
+    line-height: 26px;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    transition: 0.2s all ease-in-out;
+    width: 80px;
+    font-weight: bold;
+}
+.radio-container input[type="radio"] {
+    display: none;
+}
+.radio-container input[type="radio"]:checked + label {
+    background: white;
+    border: 1px solid rgba(0, 0, 0, .1);
+    color: #191717;
+    width:90px;
+    font-weight: bold;
+}
+
+#next a{
+    text-decoration: none;
+    color: white;
+}
+
+#next a:hover{
+    text-decoration: none;
+    color: #191717;
+}
+
+.set  a {
+    position: relative;
+    display: inline-block;
+    padding: 10px 20px;
+    color: red;
+    font-size: 16px;
+    text-decoration: none;
+    text-transform: uppercase;
+    overflow: hidden;
+    transition: .5s;
+    margin-top: 40px;
+    letter-spacing: 4px
+}
+
+.set a:hover {
+    background: red;
+    color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 5px red,
+    0 0 25px red,
+    0 0 50px red,
+    0 0 100px red;
+}
+
+.set a span {
+    position: absolute;
+    display: block;
+}
+
+.set a span:nth-child(1) {
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, red);
+    animation: btn-anim1 1s linear infinite;
+}
+
+@keyframes btn-anim1 {
+    0% {
+        left: -100%;
+    }
+    50%,100% {
+        left: 100%;
+    }
+}
+
+.set a span:nth-child(2) {
+    top: -100%;
+    right: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(180deg, transparent,red);
+    animation: btn-anim2 1s linear infinite;
+    animation-delay: .25s
+}
+
+@keyframes btn-anim2 {
+    0% {
+        top: -100%;
+    }
+    50%,100% {
+        top: 100%;
+    }
+}
+
+.set a span:nth-child(3) {
+    bottom: 0;
+    right: -100%;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(270deg, transparent, red);
+    animation: btn-anim3 1s linear infinite;
+    animation-delay: .5s
+}
+
+@keyframes btn-anim3 {
+    0% {
+        right: -100%;
+    }
+    50%,100% {
+        right: 100%;
+    }
+}
+
+.set a span:nth-child(4) {
+    bottom: -100%;
+    left: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(360deg, transparent, red);
+    animation: btn-anim4 1s linear infinite;
+    animation-delay: .75s
+}
+
+@keyframes btn-anim4 {
+    0% {
+        bottom: -100%;
+    }
+    50%,100% {
+        bottom: 100%;
+    }
+}
+
+span.required {
+    color: red;
+}
+
+.content-card-area{
+    display: flex;
+    gap:40px;
+    padding-left: 5%;
+    padding-right: 5%;
+    margin-bottom: 2%;
+    /*flex-wrap: wrap;*/
+
+
+}
+
+
+
+/*used to display each brand*/
+.content-card{
+    width:30%;
+    background-color: white;
+    box-shadow: 0 4px 8px 6px grey;
+    border-bottom-width: 33px;
+    border-color: black;
+    padding-top: 1%;
+    padding-bottom: 30px;
+    padding-right: 20px;
+    padding-left: 20px;
+    text-align: center;
+    height:fit-content;
+    display: block;
+    max-width: 30%;
+    min-width: 20%;
+}
+
+
+/*dont want the link to change txt styling*/
+/*later on the card link will diplay the cars from the brand clicked on the cars tab by applying the correct filters*/
+.content-card a{
+    text-decoration: none;
+    color: inherit;
+}
+
+/*diplay div for the brand image to ensure no movement od the brand name txt when different logo dimensions are loaded*/
+.car-pic{
+    background-repeat: no-repeat;
+    width:100%;
+    height:40%;
+    background-color: white;
+    max-width: 100%; /* Shrink the image to fit the width of the container */
+    background-size: cover; /* Cover the entire div with the background image */
+    background-position: center; /* Center the background image */
+    margin-bottom: 2%;
+}
+
+.car-name{
+    font-size: large;
+    font-weight: bolder;
+}
+
+.car-info{
+    font-size: x-large;
+    font-weight: bold;
+}
+/*this is used to display the brand's logo and name, by using a div to display the image it has optimal loading and provides better control*/
+/*ensures each logo of varying width and height is displayed within the same dimenstions*/
+.car-img{
+    background-repeat: no-repeat;
+    width:100%;
+    padding-top: 60%;
+    background-size: contain; /* Fit the background image within the div */
+    background-color: white;
+    max-width: 100%; /* Shrink the image to fit the width of the container */
+    background-position: center; /* Center the background image */
+}
+
+/*these are the different images for each card to be changed later into some js code to dynamically load*/
+#brabus-XLP .car-img{
+    background-image: url("../img/cars/Brabus_900_XLP.jpg");
+}
+#brabus-rocket .car-img{
+    background-image: url("../img/cars/Brabus_900_Rocket.jpg");
+}
+#bmw-m2 .car-img{
+    background-image: url("../img/cars/BMW_M2_Coupe.png");
+}
+#bmw-z4 .car-img{
+    background-image: url("../img/cars/BMW_Z4.png");
+}
+#tesla-m3 .car-img{
+    background-image: url("../img/cars/tesla_m3.png");
+}
+#tesla-ss .car-img{
+    background-image: url("../img/cars/tesla_ms.png");
+}
+#porsche-911 .car-img{
+    background-image: url("../img/cars/porsche_911.png");
+}
+#porsche-cayenne .car-img{
+    background-image: url("../img/cars/porsche_cayanne.png");
+}
+#alpha-giulia .car-img{
+    background-image: url("../img/cars/alpha_giulia.png");
+}
+#alpha-tonale .car-img{
+    background-image: url("../img/cars/alpha_tonale.png");
+}
+#mc_artura .car-img{
+    background-image: url("../img/cars/mc_artura.png");
+}
+#mc_gt .car-img{
+    background-image: url("../img/cars/mc_gt.png");
+}
+
+
+@media (max-width: 1680px) and (min-width: 1400px){
+    .displayImg{
+        height: 300px;
+        margin-bottom: 3px;
+    }
+    .content-card-area{
+        display: flex;
+        gap:20px;
+        padding-left: 1%;
+        padding-right: 1%;
+        margin-bottom: 2%;
+        align-items: center;
+        justify-content: center;
+        background-color: black;
+    }
+
+    /*used to display each brand*/
+    .content-card{
+        width:25%;
+        height:550px;
+        margin-bottom: 5%;
+        max-height: 700px;
+        min-width: 20%;
+    }
+
+    .car-pic{
+        width:100%;
+        height:40%;
+        max-width: 100%; /* Shrink the image to fit the width of the container */
+        background-size: cover; /* Cover the entire div with the background image */
+        background-position: center; /* Center the background image */
+        margin-bottom: 2%;
+    }
+
+    .car-info{
+        font-size: 20px;
+    }
+
+    .car-img{
+        width:100%;
+        padding-top: 60%;
+        background-size: contain; /* Fit the background image within the div */
+        max-width: 100%; /* Shrink the image to fit the width of the container */
+        background-position: center; /* Center the background image */
+    }
+}
+
+@media (max-width: 1400px) and (min-width: 900px){
+    .displayImg{
+        height: 300px;
+        margin-bottom: 3px;
+    }
+    .content-card-area{
+        display: flex;
+        gap:20px;
+        padding-left: 1%;
+        padding-right: 1%;
+        margin-bottom: 2%;
+        align-items: center;
+        justify-content: center;
+        background-color: black;
+    }
+
+    /*used to display each brand*/
+    .content-card{
+        width:20%;
+        height:350px;
+        margin-bottom: 5%;
+        max-height: 400px;
+        min-width: 15%;
+    }
+
+    .car-pic{
+        width:100%;
+        height:40%;
+        max-width: 100%; /* Shrink the image to fit the width of the container */
+        background-size: cover; /* Cover the entire div with the background image */
+        background-position: center; /* Center the background image */
+        margin-bottom: 2%;
+    }
+
+    .car-name{
+        font-size: medium;
+    }
+    .car-info{
+        font-size: 15px;
+    }
+
+    .car-img{
+        width:100%;
+        padding-top: 60%;
+        background-size: contain; /* Fit the background image within the div */
+        max-width: 100%; /* Shrink the image to fit the width of the container */
+        background-position: center; /* Center the background image */
+    }
+}
+
+@media (max-width: 900px) and (min-width: 660px){
+    .content-card-area{
+        display: flex;
+        gap:20px;
+        padding-left: 1%;
+        padding-right: 1%;
+        margin-bottom: 2%;
+        align-items: center;
+        justify-content: center;
+        background-color: black;
+    }
+
+    /*used to display each brand*/
+    .content-card{
+        width:30%;
+        height:350px;
+        margin-bottom: 5%;
+        max-height: 400px;
+        min-width: 20%;
+    }
+
+    .car-pic{
+        width:100%;
+        height:30%;
+        max-width: 100%; /* Shrink the image to fit the width of the container */
+        background-size: cover; /* Cover the entire div with the background image */
+        background-position: center; /* Center the background image */
+        margin-bottom: 2%;
+    }
+
+    .car-name{
+        font-size: small;
+    }
+    .car-info{
+        font-size: 15px;
+    }
+
+    .car-img{
+        width:100%;
+        background-size: contain; /* Fit the background image within the div */
+
+        background-position: center; /* Center the background image */
+    }
+    .displayImg{
+        height: 150px;
+        margin-bottom: 3px;
+
+    }
+}
+
+@media (max-width: 660px){
+    .content-card-area{
+        display: flex;
+        flex-direction: column;
+        gap:5px;
+        padding-left: 1%;
+        padding-right: 1%;
+        margin-bottom: 2%;
+        align-items: center;
+        justify-content: center;
+        background-color: black;
+    }
+
+    /*used to display each brand*/
+    .content-card{
+        width:70%;
+        height:450px;
+        margin-bottom: 5%;
+        max-height: 600px;
+        min-width: 60%;
+    }
+
+    .car-pic{
+        width:100%;
+        height:40%;
+        max-width: 100%; /* Shrink the image to fit the width of the container */
+        background-size: cover; /* Cover the entire div with the background image */
+        background-position: center; /* Center the background image */
+        margin-bottom: 2%;
+    }
+
+    .car-name{
+        font-size: small;
+    }
+    .car-info{
+        font-size: 15px;
+    }
+
+    .car-img{
+        width:100%;
+        background-size: contain; /* Fit the background image within the div */
+        background-position: center; /* Center the background image */
+    }
+    .displayImg{
+        height: 150px;
+        margin-bottom: 3px;
+
+    }
+}

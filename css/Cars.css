@@ -1,0 +1,693 @@
+body{
+    background-color: black;
+    font-family: 'Montserrat', sans-serif;
+}
+
+
+a{
+    text-decoration: none;
+    color: inherit;
+}
+
+
+/*searchbar*/
+.search-bar{
+    width:100%;
+    align-items: center;
+    justify-content: center;
+    height:70px;
+    display: flex;
+    background-color: black;
+    gap:5px;
+    margin-bottom: 40px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.search-bar input[type="text"] {
+    background-color: black;
+    color: white;
+    border-bottom: 0.5px solid white;
+    font-size: large;
+    outline: none; /* Remove the outline when input is focused */
+    font-family: "Montserrat", sans-serif;
+}
+
+#search-bar{
+    height: 40px;
+    width:50%;
+    background-color: black;
+    display: flex;
+    gap:5px;
+    font-family: "Montserrat", sans-serif;
+    font-weight: bold;
+}
+
+.search-btn {
+    height: 40px;
+    width:180px;
+    background-color: black;
+    border: none;
+    font-size: large;
+    cursor: pointer;
+    font-weight: bold;
+    font-family: "Montserrat", sans-serif;
+    color: white;
+}
+
+.search-btn:hover{
+    border-top: 3px solid red;
+    background-color: black;
+    color: grey;
+}
+
+#sort-btn{
+    height: 40px;
+    width:180px;
+    background-color: black;
+    border: none;
+    font-size: large;
+    cursor: pointer;
+    display: inline;
+    font-family: "Montserrat", sans-serif;
+    /*margin-top: 18px;*/
+   /* font-weight: bold;*/
+    font-weight: bold;
+    color: white;
+}
+
+#sort-btn:hover{
+    border-top: 3px solid white;
+    background-color: black;
+    color: grey;
+}
+
+#filter-btn{
+    height: 40px;
+    width:180px;
+    background-color: black;
+    border: none;
+    font-size: large;
+    color: white;
+    cursor: pointer;
+    font-family: "Montserrat", sans-serif;
+    /*margin-top: 18px;*/
+    /*font-weight: bold;*/
+    font-weight: bold;
+}
+
+#filter-btn:hover{
+    border-top: 3px solid mediumblue;
+    background-color: black;
+    color: grey;
+}
+
+.search-bar input{
+    font-size: medium;
+    width:80%;
+    background-color: white;
+    border: none;
+    height: auto;
+
+}
+
+/*styling for the sort and filter drop downs*/
+.dropdown-btn{
+    display: inline-block;
+    position: relative;
+
+}
+.dropdown-btn button{
+    border: none;
+    padding: 15px 30px;
+    font-size: medium;
+    cursor: pointer;
+    background-color: black;
+    color: white;
+}
+
+button:hover{
+    border-top:3px solid red;
+}
+
+.sort-options {
+    display: none;
+    position: absolute;
+    overflow: auto;
+    background-color:black;
+    border-radius:5px;
+    box-shadow: 0 10px 10px 0 rgba(0,0,0,0.4);
+    color:white;
+    overflow-x: hidden;
+
+}
+
+.dropdown-btn:hover .sort-options {
+    display: block;
+}
+
+.sort-options a {
+    display: block;
+    color: white;
+    text-decoration: inherit;
+    padding: 15px 30px;
+    text-align: center;
+    width: 120px;
+}
+
+.sort-options a:focus {
+    outline: none;
+    position: relative;
+}
+
+.sort-options a:after {
+    content: "";
+    background: red;
+    position: absolute;
+    bottom: 5px;
+    left: 15px;
+    height: 3px;
+    width: 0;
+    transition: .9s;
+    transition-delay: .2s;
+}
+
+a:focus, a:hover {
+    position: relative;
+}
+a:focus:after, a:hover:after {
+    width: 50%;
+}
+a:after {
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+
+/*filter button styling*/
+.dropdown-filter-btn{
+    display: inline-block;
+    position: relative;
+    font-weight: bold;
+}
+.dropdown-filter-btn button{
+    border: none;
+    padding: 15px 30px;
+    font-size: medium;
+    cursor: pointer;
+    background-color: black;
+    color: white;
+}
+
+
+.filter-options {
+    display: none;
+    position: absolute;
+    overflow: auto;
+    background-color:black;
+    border-radius:5px;
+    box-shadow: 0 10px 10px 0 rgba(0,0,0,0.4);
+    color:white;
+    overflow-x: hidden;
+    width:fit-content;
+}
+
+.dropdown-filter-btn:hover .filter-options {
+    display: flex;
+    gap:5px;
+    width: 600px;
+}
+
+.filter-options a {
+    display: block;
+    color: white;
+    text-decoration: inherit;
+    padding: 15px 30px;
+    text-align: center;
+    width:fit-content;
+
+}
+
+.filter-options a:focus {
+    outline: none;
+    position: relative;
+}
+
+.filter-options a:after {
+    content: "";
+    background: red;
+    position: absolute;
+    bottom: 5px;
+    left: 15px;
+    height: 3px;
+    width: 0;
+    transition: .9s;
+    transition-delay: .2s;
+}
+
+fieldset {
+    display: block;
+    width: fit-content;
+    padding:10px;
+    border:none;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+fieldset > label {
+    font-family: "Montserrat", sans-serif;
+    font-size: medium;
+    cursor: pointer;
+    display: flex;
+    gap:5px;
+    margin: 1em;
+}
+
+fieldset > label > input {
+    display: none;
+}
+
+fieldset > label > span {
+    color: dimgrey;
+}
+
+fieldset > label > i {
+    display: inline-block;
+    width: 50px;
+    height: 20px;
+    border-radius: 20px;
+    vertical-align: middle;
+    transition: 0.25s 0.09s;
+    position: relative;
+    background: lightgrey;
+}
+
+fieldset > label > i:after {
+    content: " ";
+    display: block;
+    width: 20px;
+    height: 20px;
+    /*top: 5px;*/
+    left: 5px;
+    border-radius: 50%;
+    background: #fff;
+    position: absolute;
+    box-shadow: 1px 2px 4px 0 rgba(0, 0, 0, 0.4);
+    transition: 0.15s;
+}
+
+fieldset > label > input:checked + i {
+    background: mediumblue;
+}
+
+fieldset > label > input:checked + i + span {
+    color: white;
+}
+
+fieldset > label > input:checked + i:after {
+    transform: translateX(25px);
+}
+#filter-btn-submit{
+    text-align: center;
+    border-radius: 5%;
+    border: 1px solid mediumblue;
+}
+#filter-btn-submit:hover{
+
+    background-color: mediumblue;
+}
+
+fieldset hr{
+    border: none;
+    width: 50%;
+    background-color: white;
+
+}
+
+/*Content area*/
+.content{
+    width:100%;
+    background-color: black;
+    margin: 10px;
+    height:fit-content;
+    padding-bottom: 20px;
+    align-items: center;
+    justify-content: center;
+}
+
+.content-card-area{
+    display: flex;
+    gap:40px;
+    padding-left: 5%;
+    padding-right: 5%;
+    margin-bottom: 2%;
+    /*flex-wrap: wrap;*/
+
+
+}
+
+
+
+/*used to display each brand*/
+.content-card{
+    width:30%;
+    background-color: white;
+    box-shadow: 0 4px 8px 6px grey;
+    border-bottom-width: 33px;
+    border-color: black;
+    padding-top: 1%;
+    padding-bottom: 30px;
+    padding-right: 20px;
+    padding-left: 20px;
+    text-align: center;
+    height:fit-content;
+    display: block;
+    max-width: 30%;
+    min-width: 20%;
+}
+
+
+/*dont want the link to change txt styling*/
+/*later on the card link will diplay the cars from the brand clicked on the cars tab by applying the correct filters*/
+.content-card a{
+    text-decoration: none;
+    color: inherit;
+}
+
+/*diplay div for the brand image to ensure no movement od the brand name txt when different logo dimensions are loaded*/
+.car-pic{
+    background-repeat: no-repeat;
+    width:100%;
+    height:40%;
+    background-color: white;
+    max-width: 100%; /* Shrink the image to fit the width of the container */
+    background-size: cover; /* Cover the entire div with the background image */
+    background-position: center; /* Center the background image */
+    margin-bottom: 2%;
+}
+
+.car-name{
+    font-size: large;
+    font-weight: bolder;
+}
+
+.car-info{
+    font-size: x-large;
+    font-weight: bold;
+}
+/*this is used to display the brand's logo and name, by using a div to display the image it has optimal loading and provides better control*/
+/*ensures each logo of varying width and height is displayed within the same dimenstions*/
+.car-img{
+    background-repeat: no-repeat;
+    width:100%;
+    padding-top: 60%;
+    background-size: contain; /* Fit the background image within the div */
+    background-color: white;
+    max-width: 100%; /* Shrink the image to fit the width of the container */
+    background-position: center; /* Center the background image */
+}
+
+/*these are the different images for each card to be changed later into some js code to dynamically load*/
+#brabus-XLP .car-img{
+    background-image: url("../img/cars/Brabus_900_XLP.jpg");
+}
+#brabus-rocket .car-img{
+    background-image: url("../img/cars/Brabus_900_Rocket.jpg");
+}
+#bmw-m2 .car-img{
+    background-image: url("../img/cars/BMW_M2_Coupe.png");
+}
+#bmw-z4 .car-img{
+    background-image: url("../img/cars/BMW_Z4.png");
+}
+#tesla-m3 .car-img{
+    background-image: url("../img/cars/tesla_m3.png");
+}
+#tesla-ss .car-img{
+    background-image: url("../img/cars/tesla_ms.png");
+}
+#porsche-911 .car-img{
+    background-image: url("../img/cars/porsche_911.png");
+}
+#porsche-cayenne .car-img{
+    background-image: url("../img/cars/porsche_cayanne.png");
+}
+#alpha-giulia .car-img{
+    background-image: url("../img/cars/alpha_giulia.png");
+}
+#alpha-tonale .car-img{
+    background-image: url("../img/cars/alpha_tonale.png");
+}
+#mc_artura .car-img{
+    background-image: url("../img/cars/mc_artura.png");
+}
+#mc_gt .car-img{
+    background-image: url("../img/cars/mc_gt.png");
+}
+
+
+.displayImg{
+    background-image: url("../img/HomePage.JPG");
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: auto;
+    height: 428px;
+    margin-bottom: 3px;
+
+}
+
+@media (max-width: 1300px)
+{
+    /*Content area*/
+    .content{
+        width:100%;
+        background-color: black;
+        margin: 10px;
+        height:fit-content;
+        padding-bottom: 20px;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .content-card-area{
+        display: flex;
+        gap:20px;
+        flex-wrap: wrap;
+        padding-left: 5%;
+        padding-right: 5%;
+        margin-bottom: 2%;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+
+    }
+
+
+
+    /*used to display each brand*/
+    .content-card{
+        width:75%;
+        background-color: white;
+        box-shadow: 0 4px 8px 6px grey;
+        border-bottom-width: 33px;
+        border-color: black;
+        padding-top: 1%;
+        padding-bottom: 30px;
+        padding-right: 20px;
+        padding-left: 20px;
+        text-align: center;
+        height:fit-content;
+        display: block;
+        margin-bottom: 15%;
+
+        max-width: 30%;
+        min-width: 70%;
+    }
+
+
+    /*dont want the link to change txt styling*/
+    /*later on the card link will diplay the cars from the brand clicked on the cars tab by applying the correct filters*/
+    .content-card a{
+        text-decoration: none;
+        color: inherit;
+    }
+
+    /*diplay div for the brand image to ensure no movement od the brand name txt when different logo dimensions are loaded*/
+    .car-pic{
+        background-repeat: no-repeat;
+        width:100%;
+        height:40%;
+        background-color: white;
+        max-width: 100%; /* Shrink the image to fit the width of the container */
+        background-size: cover; /* Cover the entire div with the background image */
+        background-position: center; /* Center the background image */
+        margin-bottom: 2%;
+    }
+
+    .car-name{
+        font-size: large;
+        font-weight: bolder;
+    }
+
+    .car-info{
+        font-size: x-large;
+        font-weight: bold;
+    }
+    /*this is used to display the brand's logo and name, by using a div to display the image it has optimal loading and provides better control*/
+    /*ensures each logo of varying width and height is displayed within the same dimenstions*/
+    .car-img{
+        background-repeat: no-repeat;
+        width:100%;
+        padding-top: 60%;
+        background-size: contain; /* Fit the background image within the div */
+        background-color: white;
+        max-width: 100%; /* Shrink the image to fit the width of the container */
+        background-position: center; /* Center the background image */
+    }
+
+
+    /*searchbar*/
+    .search-bar{
+        width:100%;
+        align-items: center;
+        justify-content: center;
+        height:70px;
+        display: flex;
+        background-color: black;
+        gap:5px;
+        margin-bottom: 40px;
+        font-family: 'Montserrat', sans-serif;
+        flex-wrap: wrap;
+    }
+
+    .search-bar input[type="text"] {
+        background-color: black;
+        color: white;
+        border-bottom: 0.5px solid white;
+        font-size: large;
+        outline: none; /* Remove the outline when input is focused */
+        font-family: "Montserrat", sans-serif;
+    }
+
+    #search-bar{
+        height: 40px;
+        width:90%;
+        background-color: black;
+        display: flex;
+        gap:5px;
+        font-family: "Montserrat", sans-serif;
+    }
+
+    .search-btn {
+        height: 40px;
+        width:180px;
+        background-color: black;
+        border: none;
+        font-size: large;
+        cursor: pointer;
+        font-weight: bold;
+        font-family: "Montserrat", sans-serif;
+        color: white;
+    }
+
+    .search-btn:hover{
+        border-top: 3px solid red;
+        background-color: black;
+        color: grey;
+    }
+
+    #sort-btn{
+        height: 40px;
+        width:180px;
+        background-color: black;
+        border: none;
+        font-size: large;
+        cursor: pointer;
+        display: inline;
+        font-family: "Montserrat", sans-serif;
+        /*margin-top: 18px;*/
+        /* font-weight: bold;*/
+        font-weight: bold;
+        color: white;
+    }
+
+    #sort-btn:hover{
+        border-top: 3px solid white;
+        background-color: black;
+        color: grey;
+    }
+
+    #filter-btn{
+        height: 40px;
+        width:180px;
+        background-color: black;
+        border: none;
+        font-size: large;
+        color: white;
+        cursor: pointer;
+        font-family: "Montserrat", sans-serif;
+        /*margin-top: 18px;*/
+        /*font-weight: bold;*/
+        font-weight: bold;
+    }
+
+    #filter-btn:hover{
+        border-top: 3px solid mediumblue;
+        background-color: black;
+        color: grey;
+    }
+
+    .search-bar input{
+        font-size: medium;
+        width:80%;
+        background-color: white;
+        border: none;
+        height: auto;
+    }
+
+    .displayImg{
+        background-image: url("../img/HomePage.JPG");
+        background-repeat: no-repeat;
+        background-size: cover;
+        width:auto ;
+        height: 100px;
+        margin-bottom: 3px;
+
+    }
+
+}
+@media (max-width: 1680px) and (min-width: 1400px){
+    .displayImg{
+        background-image: url("../img/HomePage.JPG");
+        background-repeat: no-repeat;
+        background-size: cover;
+        width:auto ;
+        height: 300px;
+        margin-bottom: 3px;
+
+    }
+}
+
+@media (max-width: 1400px) and (min-width: 900px){
+    .displayImg{
+        background-image: url("../img/HomePage.JPG");
+        background-repeat: no-repeat;
+        background-size: cover;
+        width:auto ;
+        height: 300px;
+        margin-bottom: 3px;
+
+    }
+}
+
+@media (max-width: 900px){
+    .displayImg{
+        background-image: url("../img/HomePage.JPG");
+        background-repeat: no-repeat;
+        background-size: cover;
+        width:auto ;
+        height: 150px;
+        margin-bottom: 3px;
+
+    }
+}

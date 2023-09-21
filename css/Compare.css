@@ -1,0 +1,387 @@
+body{
+    background-color: black;
+    font-family: 'Caveat', cursive;
+    font-family: 'Playfair Display', serif;
+    font-family: 'Roboto Condensed', sans-serif;
+    font-family: 'Montserrat', sans-serif;
+}
+
+a{
+    text-decoration: none;
+    color: inherit;
+}
+/*Div that is used to store the logo image*/
+.logo{
+    width: 50%;
+    height: 111px;
+    background-size: cover;
+    background-color: black;
+    margin-left: 25%;
+    margin-right: 25%;
+    padding-top: 10px;
+    align-items: center;
+    justify-content: center;
+}
+
+.top-header{
+    display: flex;
+    gap: 10px;
+    background-color: black;
+    padding-left: 10%;
+    padding-right: 10%;
+    margin-bottom: 30px;
+}
+
+/*logo image*/
+#logoImg{
+    background-image: url("../img/Logo.png");
+    background-repeat: no-repeat;
+    width: auto;
+    height: 111px;
+    margin-left: 25%;
+    margin-right: 25%;
+    max-width: 100%; /* Shrink the image to fit the width of the container */
+    background-size: cover; /* Cover the entire div with the background image */
+    background-position: center; /* Center the background image */
+}
+/*login btn styling functionallity added later*/
+#login-btn{
+    width:100px;
+    height:20px;
+    background-color: black;
+    position: relative;
+    left:98%;
+    text-align: center;
+    padding:20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-weight: bold;
+    border: none;
+    font-family: 'Montserrat', sans-serif;
+
+}
+
+#login-btn:hover{
+    border-top: 3px solid #FF0000;
+}
+
+/*header space with logo, nav bar, decorations and login btn*/
+.header{
+    width:100%;
+    height: 230px;
+    background-color: black;
+    margin: 10px;
+    /*padding-left: 25%;
+    padding-right: 25%;*/
+    padding-top: 10px;
+    height:fit-content;
+}
+
+/*Nav bar with buttons for each page*/
+.navBar{
+    display: flex;
+    gap:30px;
+    width:96%;
+    height:50px;
+    margin: 10px;
+    margin-left: 3%;
+    background-color: black;
+    font-size: large;
+}
+
+.navBar a{
+    /*display: flex;*/
+    gap:30px;
+    width:100%;
+    height:30px;
+    /*margin: 10px;*/
+    text-align: center;
+    background-color: red;
+    color: white;
+    text-decoration: none;
+    color: inherit;
+}
+.navBar a:active {
+
+    color: red;
+}
+
+.navBar a:hover{
+    /*background-color: black;*/
+    color: silver;
+}
+
+.navBar div:hover{
+    background-color: black;
+    /*color: black;*/
+    padding-bottom: 20px;
+}
+
+.Cars{
+    width:25%;
+    height:50px;
+    background-color: black;
+    color: white;
+    align-content: center;
+}
+
+.Cars:hover{
+    border-top: 3px solid red;
+}
+
+.Brands{
+    width:25%;
+    height:50px;
+    background-color: black;
+    color: white;
+}
+
+.Brands:hover{
+    border-top: 3px solid white;
+}
+
+.Compare{
+    width:25%;
+    height:50px;
+    background-color: black;
+    color: white;
+}
+
+.Compare:hover{
+    border-top: 3px solid mediumblue;
+}
+
+.Find{
+    width:25%;
+    height:50px;
+    background-color: black;
+    color: white;
+}
+
+.Find:hover{
+    border-top: 3px solid white;
+}
+
+
+/*3 colour bar decoration*/
+.bar{
+    width:100%;
+    height:20px;
+    background-color: white;
+    background-size: cover;
+    background: linear-gradient(to right, red 0%, red 33.33%, white 33.33%, white 66.66%, mediumblue 66.66%, mediumblue 100%);
+}
+
+/*Content area*/
+.content{
+    width:100%;
+    background-color: black;
+    margin: 10px;
+    height:fit-content;
+
+}
+
+/*footer area*/
+.footer{
+    width:100%;
+    height: fit-content;
+    background-color: white;
+    margin: 10px;
+    text-align: center;
+    padding-top: 30px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.footer #info-contact{
+    display: flex;
+    gap:10%;
+    width:100%;
+    /*padding-left: 30%;
+    padding-right: 30%;*/
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.footer a{
+    text-decoration: none;
+    color: inherit;
+
+}
+#info-email span{
+    font-weight: bold;
+    text-align: center;
+}
+#info-email {
+
+    text-align: center;
+}
+#info-about {
+    /* margin-left: 40%;*/
+
+    text-align: center;
+
+}
+.mode-btn{
+    width:150px;
+    height:40px;
+    color: white;
+    background-color: white;
+    text-align: center;
+    padding-bottom: 10px;
+    position: relative;
+    text-align: center;
+    padding:10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: black;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.mode-btn:hover{
+    color: white;
+    background-color: black;
+
+}
+
+hr{
+    width: 75%;
+    height:1px;
+    background-color: black;
+}
+.underline {
+    width: 50%;
+
+    background-color: black;
+}
+
+.displayImg{
+    background-image: url("../img/HomePage.JPG");
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: auto;
+    height: 428px;
+    margin-bottom: 10px;
+
+}
+/*car images displayed up to 3 cars to compare*/
+.car-img-container{
+    display: flex;
+    gap:40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.car-img{
+    width:500px;
+    height:350px;
+    background-color: white;
+    box-shadow: 0 4px 8px 6px grey;
+    margin-bottom: 20px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    padding-right: 20px;
+    padding-left: 20px;
+    text-align: center;
+}
+
+.car-pic{
+    width:100%;
+    height: 200px;
+    max-width: 100%; /* Shrink the image to fit the width of the container */
+    background-size: cover; /* Cover the entire div with the background image */
+    background-position: center; /* Center the background image */
+    background-repeat: no-repeat;
+    margin-bottom: 20px;
+}
+
+.car-img #car-img-1{
+    background-image: url("../img/cars/Brabus_900_Rocket.jpg");
+}
+
+.car-img #car-img-2{
+    background-image: url("../img/cars/BMW_Z4.png");
+}
+
+.car-img #car-img-3{
+    background-image: url("../img/cars/tesla_ms.png");
+}
+
+
+/*new code*/
+.compare-container{
+    display: flex;
+    gap:40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.compare-attributes{
+    width:500px;
+    background-color: white;
+    margin-bottom: 20px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    padding-right: 20px;
+    padding-left: 20px;
+    height: fit-content;
+    display: flex;
+    gap: 40px;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.compare-attributes hr{
+    width: 100%;
+    background-color: grey;
+}
+
+.compare-attributes h2:hover{
+    color: mediumblue;
+    cursor: pointer;
+}
+
+#attributes{
+    width:150px;
+    box-shadow: none;
+    height: fit-content;
+}
+#attributes-space{
+    background-color: black;
+    width:150px;
+    background-image: url("");
+    box-shadow: none;
+
+}
+
+.choose-btn{
+    width:150px;
+    height:40px;
+    color: black;
+    background-color: white;
+    text-align: center;
+    padding:10px;
+    font-weight: bold;
+    justify-content: center;
+    align-items: center;
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 1.2rem;
+    font-family: 'Montserrat', sans-serif;
+}
+.choose-btn:hover{
+    background-color: black;
+    color: white;
+}
+

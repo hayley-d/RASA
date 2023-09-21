@@ -1,0 +1,230 @@
+body{
+    background-color: black;
+    font-family: 'Montserrat', sans-serif;
+}
+/*Div that is used to store the logo image*/
+.logo{
+    width: 20%;
+    height: 111px;
+    background-color: black;
+    padding-top: 10px;
+    align-items: center;
+    justify-content: center;
+}
+
+/*logo image*/
+#logoImg{
+    min-width: 250px; ;
+    background-image: url("../img/Logo.png");
+    background-repeat: no-repeat;
+    background-color: black;
+    background-size: cover;
+    height: 111px;
+    max-width: 100%; /* Shrink the image to fit the width of the container */
+    background-position: center; /* Center the background image */
+}
+
+.top-header{
+    display: flex;
+   width: auto;
+    background-color: black;
+    align-items: center;
+    justify-content: center;
+}
+/*header space with logo, nav bar, decorations and login btn*/
+.header{
+    width:100%;
+    height: 230px;
+    background-color: black;
+    margin: 10px;
+    padding-top: 10px;
+}
+
+/*Nav bar with buttons for each page*/
+.navBar{
+    display: flex;
+    gap:30px;
+    width:96%;
+    height:60px;
+    margin: 10px;
+    margin-left: 3%;
+    background-color: black;
+    font-size: large;
+}
+
+.navBar a{
+    /*display: flex;*/
+    gap:30px;
+    width:100%;
+    height:30px;
+    /*margin: 10px;*/
+    text-align: center;
+    background-color: red;
+    text-decoration: none;
+    color: inherit;
+}
+/*Prevents colour change for active link*/
+.navBar a:active {
+
+    color: red;
+}
+
+.navBar a:hover{
+    color: silver;
+}
+
+.navBar div:hover{
+   /* background-color: white;
+    color: black;
+    padding-bottom: 20px;*/
+}
+
+.Cars{
+    width:25%;
+    height:50px;
+    background-color: black;
+    color: white;
+    align-content: center;
+}
+
+.Cars:hover{
+    border-top: 3px solid red;
+}
+
+.Brands{
+    width:25%;
+    height:50px;
+    background-color: black;
+    color: white;
+}
+
+.Brands:hover{
+    border-top: 3px solid white;
+}
+
+.Compare{
+    width:25%;
+    height:50px;
+    background-color: black;
+    color: white;
+}
+
+.Compare:hover{
+    border-top: 3px solid mediumblue;
+}
+
+.Find{
+    width:25%;
+    height:50px;
+    background-color: black;
+    color: white;
+}
+
+.Find:hover{
+    border-top: 3px solid white;
+}
+
+
+/*3 colour bar decoration*/
+.bar{
+    width:100%;
+    height:20px;
+    background-color: white;
+    background-size: cover;
+    background: linear-gradient(to right, red 0%, red 33.33%, white 33.33%, white 66.66%, mediumblue 66.66%, mediumblue 100%);
+}
+
+/*Content area*/
+.content{
+    width:100%;
+    /*height: 1000px;*/
+    background-color: black;
+    margin: 10px;
+}
+
+/*footer area*/
+.footer{
+    width:100%;
+    height: fit-content;
+    background-color: white;
+    margin: 10px;
+    text-align: center;
+    padding-top: 30px;
+    font-weight: bold;
+}
+
+.footer #info-contact{
+    display: flex;
+    gap:10%;
+    width:100%;
+    align-items: center;
+    justify-content: center;
+}
+.footer a{
+    text-decoration: none;
+    color: inherit;
+
+}
+#info-email span{
+    font-weight: bold;
+    text-align: center;
+}
+#info-email {
+
+    text-align: center;
+}
+
+#info-email a:hover {
+    color: #FF0000;
+}
+#info-about {
+    /* margin-left: 40%;*/
+
+    text-align: center;
+
+}
+.mode-btn{
+    width:150px;
+    height:40px;
+    background-color: white;
+    text-align: center;
+    position: relative;
+    padding:10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: black;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.mode-btn:hover{
+    color: white;
+    background-color: black;
+    border: none;
+}
+
+hr{
+    width: 75%;
+    height:1px;
+    background-color: black;
+}
+.underline {
+    width: 50%;
+
+    background-color: black;
+}
+
+.displayImg{
+    display: flex;
+    background-image: url("../img/HomePage.JPG");
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 40vh;
+    flex:1;
+    margin-bottom: 3px;
+
+}

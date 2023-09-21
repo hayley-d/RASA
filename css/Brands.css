@@ -1,0 +1,280 @@
+body{
+    background-color: black;
+    font-family: 'Montserrat', sans-serif;
+}
+
+a{
+    text-decoration: none;
+    color: inherit;
+}
+
+/*Content area*/
+.content{
+    width:100%;
+    background-color: black;
+    margin: 10px;
+    height:fit-content;
+    padding-bottom: 30px;
+}
+
+.content-card-area{
+    display: flex;
+    gap:40px;
+    padding-left: 5%;
+    padding-right: 5%;
+    margin-bottom: 30px;
+    justify-content: center;
+    align-content: center;
+    flex-wrap: wrap;
+}
+
+/*used to display each brand*/
+.content-card{
+    background-color: white;
+    box-shadow: 0 4px 8px 6px grey;
+    border-bottom-width: 33px;
+    border-color: black;
+    padding:10px;
+    text-align: center;
+    height:400px;
+    display: flex;
+    flex-direction: column;
+    gap:10px;
+    /*flex-basis: 400px;*/
+    height:400px;
+    width:400px;
+    justify-content: center;
+    align-content: center;
+
+}
+
+.content-card .row-1{
+    position: relative;
+    width:95%;
+    height:250px;
+    padding:10px;
+    background-color: white;
+    /*min-height: 200px;
+    min-width: 200px;*/
+
+}
+
+.content-card .row-2{
+    width: 100%;
+    height:fit-content;
+
+    background-color: white;
+    align-content: center;
+}
+
+/*dont want the link to change txt styling*/
+/*later on the card link will diplay the cars from the brand clicked on the cars tab by applying the correct filters*/
+.content-card a{
+    text-decoration: none;
+    color: inherit;
+}
+
+/*diplay div for the brand image to ensure no movement od the brand name txt when different logo dimensions are loaded*/
+.brand-pic{
+    width: 100%;
+    height:100%
+}
+
+.brand-name{
+    font-size: xx-large;
+   position: relative;
+ }
+
+ /*this is used to display the brand's logo and name, by using a div to display the image it has optimal loading and provides better control*/
+/*ensures each logo of varying width and height is displayed within the same dimenstions*/
+.brand-logo{
+    background-repeat: no-repeat;
+    width:100%;
+    height:220px;
+    background-size: contain; /* Fit the background image within the div */
+    background-color: white;
+    background-position: center; /* Center the background image */
+    max-height: 250px;
+}
+
+/*these are the different images for each card to be changed later into some js code to dynamically load*/
+#brabus .brand-logo{
+    background-image: url("../img/brand logos/Brabus.png");
+}
+#Tesla .brand-logo{
+    background-image: url("../img/brand logos/tesla.png");
+}
+#AlfaRomeo .brand-logo{
+    background-image: url("../img/brand logos/Alfa.png");
+}
+#BMW .brand-logo{
+    background-image: url("../img/brand logos/BMW.webp");
+}
+#McLaren .brand-logo{
+    background-image: url("../img/brand logos/mclaren.png");
+}
+#Bugatti .brand-logo{
+    background-image: url("../img/brand logos/Bugatti.png");
+}
+#Porsche .brand-logo{
+    background-image: url("../img/brand logos/posche.png");
+}
+#MiniCooper .brand-logo{
+    background-image: url("../img/brand logos/mini.png");
+}
+#MercedesBenz .brand-logo{
+    background-image: url("../img/brand logos/merc.png");
+}
+#Lamborguini .brand-logo{
+    background-image: url("../img/brand logos/lambo.png");
+}
+#Bently .brand-logo{
+    background-image: url("../img/brand logos/Bently.png");
+}
+#Aston\ Martin .brand-logo{
+    background-image: url("../img/brand logos/astonmartin.png");
+}
+
+
+.displayImg{
+    background-image: url("../img/HomePage.JPG");
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: auto;
+    height: 428px;
+    margin-bottom: 10px;
+
+}
+
+/*adjust for screen size*/
+@media (max-width: 1535px) and (min-width: 1000px)
+{
+    .content-card-area{
+        width:80%;
+        margin-left:5%;
+        margin-right:5%;
+        gap:30px;
+        margin-bottom: 30px;
+        justify-content: left;
+        flex-wrap: nowrap;
+        background-color: black;
+    }
+
+    .content-card{
+        background-color: white;
+        width:33%;
+        height: 350px;
+    }
+
+    .brand-name{
+        font-size: large;
+    }
+
+    .displayImg{
+        background-image: url("../img/HomePage.JPG");
+        background-repeat: no-repeat;
+        background-size: cover;
+        margin-bottom: 3px;
+
+    }
+
+}
+@media (max-width: 1680px) and (min-width: 1300px){
+    .displayImg{
+        background-image: url("../img/HomePage.JPG");
+        background-repeat: no-repeat;
+        background-size: cover;
+        width:auto ;
+        height: 300px;
+        margin-bottom: 3px;
+
+    }
+    .content-card-area{
+        width:80%;
+        margin-left:5%;
+        margin-right:5%;
+        gap:30px;
+        margin-bottom: 30px;
+        justify-content: left;
+        flex-wrap: nowrap;
+        background-color: black;
+    }
+
+    .content-card{
+        background-color: white;
+        width:33%;
+        height: 350px;
+    }
+
+    .brand-name{
+        font-size: large;
+    }
+
+}
+
+@media (max-width: 1400px) and (min-width: 900px){
+    .displayImg{
+        background-image: url("../img/HomePage.JPG");
+        background-repeat: no-repeat;
+        background-size: cover;
+        width:auto ;
+        height: 300px;
+        margin-bottom: 3px;
+
+    }
+    .content-card-area{
+        width:80%;
+        margin-left:5%;
+        margin-right:5%;
+        gap:30px;
+        margin-bottom: 30px;
+        justify-content: left;
+        flex-wrap: nowrap;
+        background-color: black;
+    }
+
+    .content-card{
+        background-color: white;
+        width:33%;
+        height: 350px;
+    }
+
+    .brand-name{
+        font-size: large;
+    }
+}
+
+@media (max-width: 900px) {
+    .displayImg {
+        background-image: url("../img/HomePage.JPG");
+        background-repeat: no-repeat;
+        background-size: cover;
+        width: auto;
+        height: 150px;
+        margin-bottom: 3px;
+
+    }
+    .content-card-area{
+        width:80%;
+        margin-left:5%;
+        margin-right:5%;
+        gap:30px;
+        margin-bottom: 30px;
+        justify-content: center;
+        align-content: center;
+        flex-wrap: nowrap;
+        background-color: black;
+        flex-direction: column;
+    }
+
+    .content-card{
+        background-color: white;
+        width:70%;
+        height: 350px;
+        margin:40px;
+    }
+
+    .brand-name{
+        font-size: large;
+    }
+}

@@ -1,0 +1,74 @@
+/*footer area*/
+.footer{
+    width:100%;
+    height: fit-content;
+    background-color: white;
+    margin: 10px;
+    text-align: center;
+    padding-top: 30px;
+    font-weight: bold;
+}
+
+.footer #info-contact{
+    display: flex;
+    gap:10%;
+    width:100%;
+    align-items: center;
+    justify-content: center;
+}
+.footer a{
+    text-decoration: none;
+    color: inherit;
+
+}
+#info-email span{
+    font-weight: bold;
+    text-align: center;
+}
+#info-email {
+
+    text-align: center;
+}
+
+#info-email a:hover {
+    color: #FF0000;
+}
+#info-about {
+    /* margin-left: 40%;*/
+
+    text-align: center;
+
+}
+.mode-btn{
+    width:150px;
+    height:40px;
+    background-color: white;
+    text-align: center;
+    position: relative;
+    padding:10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: black;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.mode-btn:hover{
+    color: white;
+    background-color: black;
+    border: none;
+}
+
+hr{
+    width: 75%;
+    height:1px;
+    background-color: black;
+}
+.underline {
+    width: 50%;
+
+    background-color: black;
+}
