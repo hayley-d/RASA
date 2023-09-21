@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Caveat&family=Playfair+Display:wght@500&family=Roboto+Condensed&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,200;1,200&display=swap" rel="stylesheet">
+</head>
+<style>
+  @import url('https://fonts.googleapis.com/css?family=Montserrat:400,600&display=swap');
+ body{
+   font-family: "Montserrat", sans-serif;
+   background-color: black;
+ }
+  .find-container {
+    width:50%;
+    margin-left:25%;
+    margin-right:25%;
+    margin-top:5%;
+    display: grid;
+    grid-template-areas: "left right";
+    max-width: 850px;
+  }
+
+  .left-container {
+    background: #807182;
+    background-image: url("img/findCarForm.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow: hidden;
+    padding: 40px 0 0 0;
+    position: relative;
+    text-align: center;
+    width: 300px;
+    border-radius: 5px;
+  }
+
+  .right-container {
+    background: #191717;
+    display: grid;
+    grid-template-areas: "." ".";
+    width: 500px;
+    border-radius: 5px;
+  }
+
+  .right-container h1:nth-of-type(1) {
+    color: rgba(0, 0, 0, .8);
+    font-size: 28px;
+    font-weight: 600;
+    color: white;
+    text-align: center;
+  }
+
+  .right-container .set {
+    display: flex;
+    gap:50px;
+
+    /*justify-content: center;*/
+    margin: 10px 0;
+  }
+
+  .right-container select {
+    border: 1px solid rgba(0, 0, 0, .1);
+    border-radius: 4px;
+    height: 38px;
+    line-height: 38px;
+    padding-left: 5px;
+    width:190px;
+    color: #666666;
+  }
+
+
+ .right-container label {
+    color: white;
+    margin-top:5px;
+  }
+
+  .right-container header {
+    padding: 40px;
+  }
+
+
+  .right-container .pets-weight .radio-container {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+  }
+  .right-container footer {
+    align-items: center;
+    background: #191717;
+    display: grid;
+    padding: 5px 40px;
+    align-content: center;
+    justify-content: center;
+    width: 400px;
+    height:90px;
+
+  }
+  .right-container footer button {
+    border: 1px solid rgba(0, 0, 0, .2);
+    height: 38px;
+    line-height: 38px;
+    width: 100px;
+    border-radius: 19px;
+    font-family: 'Montserrat', sans-serif;
+  }
+
+  .right-container footer #next {
+    background: red;
+    border: 1px solid transparent;
+    color: #fff;
+    font-size: 16px;
+
+  }
+  .right-container footer #next:hover {
+    background: white;
+    color: #191717;
+    cursor: pointer;
+  }
+  .price-range label, .body-type label, .drive-type label, .door-num label, .transmission-type label, .pets-weight label .fuel-type label{
+    display: block;
+    margin-bottom: 5px;
+  }
+
+  .radio-container {
+    background: red;
+    border: 1px solid rgba(0, 0, 0, .1);
+    border-radius: 4px;
+    display: flex;
+    gap:10px;
+    padding: 5px;
+    width:180px;
+  }
+
+  .fuel-type > .radio-container {
+    background: red;
+    border: 1px solid rgba(0, 0, 0, .1);
+    border-radius: 4px;
+    display: flex;
+    gap:10px;
+    padding: 5px;
+    width:400px;
+  }
+
+  .radio-container label {
+    background: transparent;
+    border: 1px solid transparent;
+    border-radius: 2px;
+    display: inline-block;
+    height: 26px;
+    line-height: 26px;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    transition: 0.2s all ease-in-out;
+    width: 80px;
+  }
+  .radio-container input[type="radio"] {
+    display: none;
+  }
+  .radio-container input[type="radio"]:checked + label {
+    background: white;
+    border: 1px solid rgba(0, 0, 0, .1);
+    color: #191717;
+    width:90px;
+  }
+
+#next a{
+  text-decoration: none;
+  color: white;
+}
+
+  #next a:hover{
+    text-decoration: none;
+    color: #191717;
+  }
+
+  .set  a {
+    position: relative;
+    display: inline-block;
+    padding: 10px 20px;
+    color: red;
+    font-size: 16px;
+    text-decoration: none;
+    text-transform: uppercase;
+    overflow: hidden;
+    transition: .5s;
+    margin-top: 40px;
+    letter-spacing: 4px
+  }
+
+  .set a:hover {
+    background: red;
+    color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 5px red,
+    0 0 25px red,
+    0 0 50px red,
+    0 0 100px red;
+  }
+
+  .set a span {
+    position: absolute;
+    display: block;
+  }
+
+  .set a span:nth-child(1) {
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, red);
+    animation: btn-anim1 1s linear infinite;
+  }
+
+  @keyframes btn-anim1 {
+    0% {
+      left: -100%;
+    }
+    50%,100% {
+      left: 100%;
+    }
+  }
+
+  .set a span:nth-child(2) {
+    top: -100%;
+    right: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(180deg, transparent,red);
+    animation: btn-anim2 1s linear infinite;
+    animation-delay: .25s
+  }
+
+  @keyframes btn-anim2 {
+    0% {
+      top: -100%;
+    }
+    50%,100% {
+      top: 100%;
+    }
+  }
+
+  .set a span:nth-child(3) {
+    bottom: 0;
+    right: -100%;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(270deg, transparent, red);
+    animation: btn-anim3 1s linear infinite;
+    animation-delay: .5s
+  }
+
+  @keyframes btn-anim3 {
+    0% {
+      right: -100%;
+    }
+    50%,100% {
+      right: 100%;
+    }
+  }
+
+  .set a span:nth-child(4) {
+    bottom: -100%;
+    left: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(360deg, transparent, red);
+    animation: btn-anim4 1s linear infinite;
+    animation-delay: .75s
+  }
+
+  @keyframes btn-anim4 {
+    0% {
+      bottom: -100%;
+    }
+    50%,100% {
+      bottom: 100%;
+    }
+  }
+
+</style>
+<body>
+<div class="find-container">
+  <div class="left-container">
+  </div>
+  <div class="right-container">
+    <header>
+      <h1>Your Dream Car</h1>
+      <div class="set">
+        <!--selector for price range of the car-->
+        <div class="price-range">
+          <label for="price-range">Price Range</label>
+          <select id="price-range">
+            <option value="">Price Range</option>
+            <option value="1">< 100k</option>
+            <option value="2">100k - 300k</option>
+            <option value="3">300k - 700k</option>
+            <option value="4"> > 700k</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="set">
+        <!--selector for body type of the car-->
+        <div class="body-type">
+          <label for="body-type">Body Type</label>
+          <select id = "body-type">
+            <option value="">Body Type</option>
+            <option value="1">SUV</option>
+            <option value="2">Supercar</option>
+            <option value="3">Sudan</option>
+            <option value="4">Hatchback</option>
+          </select>
+        </div>
+        <!--selector for drive type of the car-->
+        <div class="drive-type">
+          <label for="drive-type">Drive</label>
+          <select id = "drive-type">
+            <option value="">Drive</option>
+            <option value="1">4-Wheel-Drive</option>
+            <option value="2">Front-Wheel-Drive</option>
+            <option value="3">Rear-Wheel-Drive</option>
+            <option value="4">All-Wheel-Drive</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="set">
+        <!--radio btn for transmission type of the car-->
+        <div class="transmission-type">
+          <label for="transmission-type-auto">Transmission</label>
+          <div class="radio-container">
+            <input id="transmission-type-auto" name="transmission-type" type="radio" value="automatic"></input>
+            <label for="transmission-type-auto">Automatic</label>
+            <input id="transmission-type-man" name="transmission-type" type="radio" value="manual"></input>
+            <label for="transmission-type-man">Manual</label>
+          </div>
+        </div>
+        <div class="door-num">
+          <label for="door-num-3door">Doors</label>
+          <div class="radio-container">
+            <input id="door-num-3door" name="door-num" type="radio" value="3-door"></input>
+            <label for="door-num-3door">3 Door</label>
+            <input id="door-num-5door" name="door-num" type="radio" value="5-door"></input>
+            <label for="door-num-5door">5 Door</label>
+          </div>
+        </div>
+      </div>
+      <div class="fuel-type">
+        <label for="fuel-type-petrol">Fuel Type</label>
+        <div class="radio-container">
+          <input id="fuel-type-petrol" name="fuel-type" type="radio" value="petrol"></input>
+          <label for="fuel-type-petrol">Petrol</label>
+          <input id="pet-weight-25-50" name="fuel-type" type="radio" value="desiel"></input>
+          <label for="pet-weight-25-50">Desiel</label>
+          <input id="pet-weight-50-100" name="fuel-type" type="radio" value="50-100"></input>
+          <label for="pet-weight-50-100">Eletric</label>
+          <input id="pet-weight-100-plus" name="fuel-type" type="radio" value="100+"></input>
+          <label for="pet-weight-100-plus">Hybird</label>
+        </div>
+      </div>
+    </header>
+    <footer>
+      <div class="set">
+        <div class = "login-box">
+          <a  href="#">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            Find Car
+          </a>
+        </div>
+
+      </div>
+    </footer>
+  </div>
+</div>
+
+
+
+</body>
+</html>

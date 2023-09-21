@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<!--By Hayley Dodkins u21528790-->
+<head>
+    <meta charset="UTF-8">
+    <title>RASA</title>
+    <link rel = "stylesheet" href = "css/FindCar.css"/>
+    <link rel = "stylesheet" href = "css/Header.css"/>
+    <link rel = "stylesheet" href = "css/Footer.css"/>
+    <!--link for additional font-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Caveat&family=Playfair+Display:wght@500&family=Roboto+Condensed&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Caveat&family=Playfair+Display:wght@500&family=Roboto+Condensed&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,200;1,200&display=swap" rel="stylesheet">
+</head>
+
+<body>
+<!--header div stores logo, nav, log in and out btn-->
+<div class = "header">
+
+    <!--used div to store image since css enables more control over styling and for optimal loading-->
+    <div class = "top-header">
+        <button id = "login-btn"><a href = "underConstruction.html"><h2>Login</h2></a></button>
+        <div class = "logo">
+            <div id = "logoImg"></div>
+        </div>
+    </div>
+
+    <!--navigation bar to swtich between pages-->
+    <div class = "navBar">
+        <div class = "Cars"><a href="Cars.html"><h2>Cars</h2></a></div>
+        <div class = "Brands"><a href="Brands.html"><h2>Brands</h2></a></div>
+        <div class = "Find"><a href="FindCar.html"><h2>Find A Car</h2></a></div>
+        <div class = "Compare"><a href="Compare.html"><h2>Compare</h2></a></div>
+    </div>
+    <br/>
+    <div class="bar"></div>
+
+</div>
+
+<!--content div stores photo and information-->
+<div class = "content">
+
+    <!--image is displayed using div for performance and styling reasons-->
+    <!--decore for webpage showcase products-->
+    <div class = "displayImg">
+
+    </div>
+
+    <div class="find-container">
+        <div class="left-container">
+        </div>
+        <div class="right-container">
+            <header>
+                <h1>Your Dream Car</h1>
+                <div class="set">
+                    <!--selector for price range of the car-->
+                    <div class="price-range">
+                        <label for="price-range">Price Range<span class="required">*</span></label>
+                        <select id="price-range" required>
+                            <option value="">Price Range</option>
+                            <option value="1">< 100k</option>
+                            <option value="2">100k - 300k</option>
+                            <option value="3">300k - 700k</option>
+                            <option value="4"> > 700k</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="set">
+                    <!--selector for body type of the car-->
+                    <div class="body-type">
+                        <label for="body-type">Body Type</label>
+                        <select id = "body-type">
+                            <option value="">Body Type</option>
+                            <option value="1">SUV</option>
+                            <option value="2">Supercar</option>
+                            <option value="3">Sudan</option>
+                            <option value="4">Hatchback</option>
+                        </select>
+                    </div>
+                    <!--selector for drive type of the car-->
+                    <div class="drive-type">
+                        <label for="drive-type">Drive</label>
+                        <select id = "drive-type">
+                            <option value="">Drive</option>
+                            <option value="1">4-Wheel-Drive</option>
+                            <option value="2">Front-Wheel-Drive</option>
+                            <option value="3">Rear-Wheel-Drive</option>
+                            <option value="4">All-Wheel-Drive</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="set">
+                    <!--radio btn for transmission type of the car-->
+                    <div class="transmission-type">
+                        <label for="transmission-type-auto">Transmission<span class="required">*</span></label>
+                        <div class="radio-container">
+                            <input id="transmission-type-auto" name="transmission-type" type="radio" value="automatic" required></input>
+                            <label for="transmission-type-auto">Automatic</label>
+                            <input id="transmission-type-man" name="transmission-type" type="radio" value="manual" required></input>
+                            <label for="transmission-type-man">Manual</label>
+                        </div>
+                    </div>
+                    <div class="door-num">
+                        <label for="door-num-3door">Doors<span class="required">*</span></label>
+                        <div class="radio-container">
+                            <input id="door-num-3door" name="door-num" type="radio" value="3-door" required></input>
+                            <label for="door-num-3door">3 Door</label>
+                            <input id="door-num-5door" name="door-num" type="radio" value="5-door" required></input>
+                            <label for="door-num-5door">5 Door</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="fuel-type">
+                    <label for="fuel-type-petrol">Fuel Type<span class="required">*</span></label>
+                    <div class="radio-container">
+                        <input id="fuel-type-petrol" name="fuel-type" type="radio" value="petrol" required></input>
+                        <label for="fuel-type-petrol">Petrol</label>
+                        <input id="pet-weight-25-50" name="fuel-type" type="radio" value="diesel" required></input>
+                        <label for="pet-weight-25-50">Diesel</label>
+                        <input id="pet-weight-50-100" name="fuel-type" type="radio" value="eletric" required></input>
+                        <label for="pet-weight-50-100">Eletric</label>
+                        <input id="pet-weight-100-plus" name="fuel-type" type="radio" value="hybrid" required></input>
+                        <label for="pet-weight-100-plus">Hybird</label>
+                    </div>
+                </div>
+            </header>
+            <footer>
+                <div class="set">
+                    <div class = "login-box">
+                        <a  href="#">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            Find Car
+                        </a>
+                    </div>
+
+                </div>
+            </footer>
+        </div>
+    </div>
+    <br>
+    <br>
+    <div class="bar"></div>
+    <br>
+    <div class = "find-results">
+        <div class = "content-card-area">
+            <div class = "content-card" id = "brabus-XLP">
+                <a><div class = "car-pic"><div class = "car-img"></div></div></a>
+                <a><div class = "car-name"><h2>Brabus XLP</h2></div></a>
+                <hr/>
+                <a><div class = "car-info"><p>R1 485 000</p></div></a>
+                <a><div class = "car-info"><p>Fule Type: Petrol</p></div></a>
+                <a><div class = "car-info"><p>Acceleration 0-100km/h: 4.4s</p></div></a>
+                <a><div class = "car-info"><p>Gear box: Automatic</p></div></a>
+            </div>
+            <div class = "content-card" id = "brabus-rocket">
+                <a><div class = "car-pic"><div class = "car-img"></div></div></a>
+                <a><div class = "car-name"><h2>Brabus Rocket</h2></div></a>
+                <hr/>
+                <a><div class = "car-info"><p>R1 485 000</p></div></a>
+                <a><div class = "car-info"><p>Fule Type: Petrol</p></div></a>
+                <a><div class = "car-info"><p>Acceleration 0-100km/h: 4.1s</p></div></a>
+                <a><div class = "car-info"><p>Gear box: Automatic</p></div></a>
+            </div>
+            <div class = "content-card" id = "bmw-m2">
+                <a><div class = "car-pic"><div class = "car-img"></div></div></a>
+                <a><div class = "car-name"><h2>BMW M2 Coupe</h2></div></a>
+                <hr/>
+                <a><div class = "car-info"><p>R1 485 000</p></div></a>
+                <a><div class = "car-info"><p>Fule Type: Petrol</p></div></a>
+                <a><div class = "car-info"><p>Acceleration 0-100km/h: 4.1s</p></div></a>
+                <a><div class = "car-info"><p>Gear box: Automatic</p></div></a>
+            </div>
+        </div>
+        <div class = "content-card-area">
+            <div class = "content-card" id = "bmw-z4">
+                <a><div class = "car-pic" ><div class = "car-img"></div></div></a>
+                <a><div class = "car-name"><h2>BMW Z4</h2></div></a>
+                <hr/>
+                <a><div class = "car-info"><p>R985 000</p></div></a>
+                <a><div class = "car-info"><p>Fule Type: Petrol</p></div></a>
+                <a><div class = "car-info"><p>Acceleration 0-100km/h: 6.6s</p></div></a>
+                <a><div class = "car-info"><p>Gear box: Automatic</p></div></a>
+            </div>
+            <div class = "content-card" id = "tesla-m3">
+                <a><div class = "car-pic" ><div class = "car-img"></div></div></a>
+                <a><div class = "car-name"><h2>Tesla Model 3</h2></div></a>
+                <hr/>
+                <a><div class = "car-info"><p>R1 485 000</p></div></a>
+                <a><div class = "car-info"><p>Fule Type: Petrol</p></div></a>
+                <a><div class = "car-info"><p>Acceleration 0-100km/h: 4.1s</p></div></a>
+                <a><div class = "car-info"><p>Gear box: Automatic</p></div></a>
+            </div>
+            <div class = "content-card" id = "tesla-ss">
+                <a><div class = "car-pic"><div class = "car-img"></div></div></a>
+                <a><div class = "car-name"><h2>Tesla Model S</h2></div></a>
+                <hr/>
+                <a><div class = "car-info"><p>R1 485 000</p></div></a>
+                <a><div class = "car-info"><p>Fule Type: Petrol</p></div></a>
+                <a><div class = "car-info"><p>Acceleration 0-100km/h: 1.99s</p></div></a>
+                <a><div class = "car-info"><p>Gear box: Automatic</p></div></a>
+            </div>
+        </div>
+    </div>
+
+
+</div>
+
+<!--footer div stores contact info, location and socials-->
+<div class = "footer">
+    <!--Random info about Company-->
+    <div id = "info-contact">
+        <div id="info-about">
+            <h3>About</h3>
+            <hr class = "underline"/>
+            <a><p>We sell and buy supercars</p></a>
+            <a><p>Terms and Conditions apply</p></a>
+        </div>
+        <!--Contact Information with location and google maps given-->
+        <div id="info-email">
+            <h3>Contact</h3>
+            <hr class = "underline"/>
+            <a href = "https://www.google.com/maps/@35.7040744,139.5577317,3a,80.9y,292.44h,75.21t/data=!3m6!1e1!3m4!1sgT28ssf0BB2LxZ63JNcL1w!2e0!7i13312!8i6656?entry=ttu"><p>Where to Find us</p></a>
+            <a><p><span>T </span>+27 674 152 597</p></a>
+            <a><p><span>E </span>sales@rasacars.co.za</p></a>
+        </div>
+
+        <button class = "mode-btn"><a><h3>Light Mode</h3></a></button>
+    </div>
+    <!--mock copyright data-->
+    <br/>
+    <hr/>
+    <div id="info-name">© COPYRIGHT 2023 RASA™ | All Rights Reserved | Get Shwifty </div>
+    <br/>
+
+</div>
+
+</body>
+
+</html>
