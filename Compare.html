@@ -52,78 +52,81 @@
 
     <!--Compare table-->
     <!--Display Car photos for up to 3 cars)-->
-    <div class ="car-img-container">
-        <div class = "car-img" id = "attributes-space"></div>
-        <div class = "car-img"><div class = "car-pic" id = "car-img-1"></div><div><h2>Brabus Rocket</h2><button class = "choose-btn" id = "car-1">Choose Me</button></div></div>
-        <div class = "car-img"><div  class = "car-pic" id = "car-img-2"></div><h2>BMW Z4</h2><button class = "choose-btn" id = "car-2">Choose Me</button></div>
-        <div class = "car-img"><div class = "car-pic" id = "car-img-3"></div><h2>Tesla Model S</h2><button class = "choose-btn" id = "car-3">Choose Me</button></div>
+    <div id = compare-container>
+        <div class = "card black-card">
+
+        </div>
+
+        <div class = "card car-display">
+            <div id="loading-spinner" class="spinner">
+                <div class="spinner-inner red"></div>
+                <div class="spinner-inner white"></div>
+                <div class="spinner-inner blue"></div>
+            </div>
+            <div class = "car-img-container" id = "car-img-1"></div>
+            <div><h2 id = "car-1-name">Brabus Rocket</h2></div>
+            <div><a><button class = "choose-btn">Choose Car</button></a></div>
+        </div>
+
+        <div class = "card car-display">
+            <div id="loading-spinner2" class="spinner">
+                <div class="spinner-inner red"></div>
+                <div class="spinner-inner white"></div>
+                <div class="spinner-inner blue"></div>
+            </div>
+            <div class = "car-img-container" id = "car-img-2"></div>
+            <div><h2 id = "car-2-name">BMW Z4</h2></div>
+            <div><a><button class = "choose-btn">Choose Car</button></a></div>
+        </div>
+
+        <div class = "card car-display">
+            <div id="loading-spinner3" class="spinner">
+                <div class="spinner-inner red"></div>
+                <div class="spinner-inner white"></div>
+                <div class="spinner-inner blue"></div>
+            </div>
+            <div class = "car-img-container" id = "car-img-3"></div>
+            <div><h2 id = "car-3-name">Tesla Model S</h2></div>
+            <div><a><button class = "choose-btn">Choose Car</button></a></div>
+        </div>
+
+        <div class = "card" id = "attributes">
+            <!--attribute names-->
+            <div><h2>Top Speed</h2><hr/></div>
+            <div><h2>Year</h2><hr/></div>
+            <div><h2>Fuel Type</h2><hr/></div>
+            <div><h2>Gearbox</h2><hr/></div>
+            <div><h2>Drive Wheels</h2><hr/></div>
+            <div><h2>Seats</h2><hr/></div>
+        </div>
+        <div class = "card comparison-values">
+            <div id = "top-speed-1"><h2>320km/h</h2><hr/></div>
+            <div  id = "year-1"><h2>2018</h2><hr/></div>
+            <div  id = "fuel-type-1"><h2>Eletric</h2><hr/></div>
+            <div  id = "gear-box-1"><h2>Automatic</h2><hr/></div>
+            <div  id = "drive-1"><h2>R4 903 000</h2><hr/></div>
+            <div  id = "seats-1"><h2>4.1s</h2><hr/></div>
+        </div>
+        <div class = "card comparison-values">
+            <div id = "top-speed-2"><h2>320km/h</h2><hr/></div>
+            <div  id = "year-2"><h2>2018</h2><hr/></div>
+            <div  id = "fuel-type-2"><h2>Eletric</h2><hr/></div>
+            <div  id = "gear-box-2"><h2>Automatic</h2><hr/></div>
+            <div  id = "drive-2"><h2>R5 903 000</h2><hr/></div>
+            <div  id = "seats-2"><h2>2.1s</h2><hr/></div>
+        </div>
+        <div class = "card comparison-values">
+            <div id = "top-speed-3"><h2>320km/h</h2><hr/></div>
+            <div  id = "year-3"><h2>2018</h2><hr/></div>
+            <div  id = "fuel-type-3"><h2>Eletric</h2><hr/></div>
+            <div  id = "gear-box-3"><h2>Automatic</h2><hr/></div>
+            <div  id = "drive-3"><h2>R2 903 000</h2><hr/></div>
+            <div  id = "seats-3"><h2>4.3s</h2><hr/></div>
+        </div>
     </div>
 
     <!--Display Car features: top Speed, colour, year, engine, price, type(hybird, gas, desiel, eletric)-->
-    <div class = "compare-container">
-        <div class = "car-img" id = "attributes">
-            <div class = "heading"><h2>Top Speed</h2></div>
-            <hr/>
-            <div class = "heading"><h2>Year</h2></div>
-            <hr/>
-            <div class = "heading"><h2>Fuel Type</h2></div>
-            <hr/>
-            <div class = "heading"><h2>Gearbox</h2></div>
-            <hr/>
-            <div class = "heading"><h2>Price</h2></div>
-            <hr/>
-            <div class = "heading"><h2>Acceleration</h2></div>
-        </div>
 
-        <div class = "compare-attributes" id = "ratings-1">
-            <!--Heading for each attribute-->
-            <div class = "ratings-car-1">
-                <div id = "top-speed-1"><h2>320km/h</h2></div>
-                <hr/>
-                <div  id = "year-1"><h2>2022</h2></div>
-                <hr/>
-                <div  id = "fuel-type-1"><h2>Eletric</h2></div>
-                <hr/>
-                <div  id = "gear-box-1"><h2>Automatic</h2></div>
-                <hr/>
-                <div  id = "price-1"><h2>R1 903 000</h2></div>
-                <hr/>
-                <div  id = "acceleration-1"><h2>4.1s</h2></div>
-            </div>
-        </div>
-        <div class = "compare-attributes" id = "ratings-2">
-            <!--Heading for each attribute-->
-            <div class = "ratings-car-1">
-                <div id = "top-speed-2"><h2>320km/h</h2></div>
-                <hr/>
-                <div  id = "year-2"><h2>2022</h2></div>
-                <hr/>
-                <div  id = "fuel-type-2"><h2>Eletric</h2></div>
-                <hr/>
-                <div  id = "gear-box-2"><h2>Automatic</h2></div>
-                <hr/>
-                <div  id = "price-2"><h2>R1 903 000</h2></div>
-                <hr/>
-                <div  id = "acceleration-2"><h2>4.1s</h2></div>
-            </div>
-        </div>
-        <div class = "compare-attributes" id = "ratings-3">
-            <!--Heading for each attribute-->
-            <div class = "ratings-car-1">
-                <div id = "top-speed-3"><h2>320km/h</h2></div>
-                <hr/>
-                <div  id = "year-3"><h2>2022</h2></div>
-                <hr/>
-                <div  id = "fuel-type-3"><h2>Eletric</h2></div>
-                <hr/>
-                <div  id = "gear-box-3"><h2>Automatic</h2></div>
-                <hr/>
-                <div  id = "price-3"><h2>R1 903 000</h2></div>
-                <hr/>
-                <div  id = "acceleration-3"><h2>4.1s</h2></div>
-            </div>
-        </div>
-    </div>
 
 </div>
 
@@ -156,7 +159,7 @@
     <br/>
 
 </div>
-
+<script src = "js/compare.js"></script>
 </body>
 
 </html>
