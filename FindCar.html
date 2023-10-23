@@ -7,6 +7,7 @@
     <link rel = "stylesheet" href = "css/FindCar.css"/>
     <link rel = "stylesheet" href = "css/Header.css"/>
     <link rel = "stylesheet" href = "css/Footer.css"/>
+    <link rel = "stylesheet" href = "css/findCarForm.css"/>
     <!--link for additional font-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -52,90 +53,106 @@
 
     </div>
 
-    <div class="find-container">
+    <div class="form-container" id = "form-container">
         <div class="left-container">
         </div>
         <div class="right-container">
-            <header>
-                <h1>Your Dream Car</h1>
-                <div class="set">
-                    <!--selector for price range of the car-->
-                    <div class="price-range">
-                        <label for="price-range">Price Range<span class="required">*</span></label>
-                        <select id="price-range" required>
-                            <option value="">Price Range</option>
-                            <option value="1">< 100k</option>
-                            <option value="2">100k - 300k</option>
-                            <option value="3">300k - 700k</option>
-                            <option value="4"> > 700k</option>
+
+                <div id = "form-heading-div"><h1 id = "form-heading">Find Your Car</h1></div>
+
+                <div class="set" id = "drive-selection">
+                    <!--selector for drive wheels of the car-->
+                    <div class="drive-wheels" id = "drivewheels">
+                        <label for="drive-wheels">Drive Wheels<span class="required">*</span></label>
+                        <select id="drive-wheels" required>
+                            <option value="">Drive Wheels</option>
+                            <option value="Rear wheel drive">Rear wheel drive</option>
+                            <option value="Front wheel drive">Front wheel drive</option>
+                            <option value="All wheel drive (AWD)">All wheel drive</option>
                         </select>
                     </div>
                 </div>
 
-                <div class="set">
+
+
+                <div class="set" id = "body-seat-container">
                     <!--selector for body type of the car-->
                     <div class="body-type">
                         <label for="body-type">Body Type</label>
                         <select id = "body-type">
                             <option value="">Body Type</option>
-                            <option value="1">SUV</option>
-                            <option value="2">Supercar</option>
-                            <option value="3">Sudan</option>
-                            <option value="4">Hatchback</option>
+                            <option value="Cabriolet">Cabriolet</option>
+                            <option value="Coupe">Coupe</option>
+                            <option value="Roadster">Roadster</option>
+                            <option value="Crossover">Crossover</option>
+                            <option value="Sedan">Sedan</option>
+                            <option value="Hatchback">Hatchback</option>
+                            <option value="Liftback">Liftback</option>
+                            <option value="Wagon">Wagon</option>
+                            <option value="Minivan">Minivan</option>
+                            <option value="Fastback">Fastback</option>
+                            <option value="Pickup">Pickup</option>
+                            <option value="hardtop">hardtop</option>
+                            <option value="Targa">Targa</option>
+                            <option value="Limousine">Limousine</option>
                         </select>
                     </div>
                     <!--selector for drive type of the car-->
-                    <div class="drive-type">
-                        <label for="drive-type">Drive</label>
-                        <select id = "drive-type">
-                            <option value="">Drive</option>
-                            <option value="1">4-Wheel-Drive</option>
-                            <option value="2">Front-Wheel-Drive</option>
-                            <option value="3">Rear-Wheel-Drive</option>
-                            <option value="4">All-Wheel-Drive</option>
+                    <div class="seats">
+                        <label for="seats">Number of Seats</label>
+                        <select id = "seats">
+                            <option value="">Seats</option>
+                            <option value="1">2</option>
+                            <option value="2">4</option>
+                            <option value="3">5</option>
                         </select>
                     </div>
                 </div>
 
-                <div class="set">
-                    <!--radio btn for transmission type of the car-->
-                    <div class="transmission-type">
-                        <label for="transmission-type-auto">Transmission<span class="required">*</span></label>
-                        <div class="radio-container">
-                            <input id="transmission-type-auto" name="transmission-type" type="radio" value="automatic" required></input>
-                            <label for="transmission-type-auto">Automatic</label>
-                            <input id="transmission-type-man" name="transmission-type" type="radio" value="manual" required></input>
-                            <label for="transmission-type-man">Manual</label>
-                        </div>
-                    </div>
-                    <div class="door-num">
-                        <label for="door-num-3door">Doors<span class="required">*</span></label>
-                        <div class="radio-container">
-                            <input id="door-num-3door" name="door-num" type="radio" value="3-door" required></input>
-                            <label for="door-num-3door">3 Door</label>
-                            <input id="door-num-5door" name="door-num" type="radio" value="5-door" required></input>
-                            <label for="door-num-5door">5 Door</label>
-                        </div>
-                    </div>
-                </div>
-                <div class="fuel-type">
-                    <label for="fuel-type-petrol">Fuel Type<span class="required">*</span></label>
+            <div class="set" id = "transmission-fuzzy-container">
+                <div id = "trans-fuz-container">
+                <div class="transmission-type" id = "transmission-container">
+                    <label for="transmission-type-auto">Transmission<span class="required">*</span></label>
                     <div class="radio-container">
-                        <input id="fuel-type-petrol" name="fuel-type" type="radio" value="petrol" required></input>
-                        <label for="fuel-type-petrol">Petrol</label>
-                        <input id="pet-weight-25-50" name="fuel-type" type="radio" value="diesel" required></input>
-                        <label for="pet-weight-25-50">Diesel</label>
-                        <input id="pet-weight-50-100" name="fuel-type" type="radio" value="eletric" required></input>
-                        <label for="pet-weight-50-100">Eletric</label>
-                        <input id="pet-weight-100-plus" name="fuel-type" type="radio" value="hybrid" required></input>
-                        <label for="pet-weight-100-plus">Hybird</label>
+                        <input id="transmission-type-auto" name="transmission-type" type="radio" value="Automatic" required></input>
+                        <label for="transmission-type-auto">Automatic</label>
+                        <input id="transmission-type-man" name="transmission-type" type="radio" value="Manual" required></input>
+                        <label for="transmission-type-man">Manual</label>
                     </div>
                 </div>
-            </header>
-            <footer>
-                <div class="set">
-                    <div class = "login-box">
-                        <a  href="#">
+
+                <div class="transmission-type" id = "fuzzy-container">
+                    <label for="fuzzy-search">Fuzzy Search<span class="required">*</span></label>
+                    <div class="radio-container">
+                        <input id="fuzzy-search" name="door-num" type="radio" value="true" required></input>
+                        <label for="fuzzy-search">Fuzzy</label>
+                        <input id="nfuzzy-search" name="door-num" type="radio" value="false" required></input>
+                        <label for="nfuzzy-search">Non fuzzy</label>
+                    </div>
+                </div>
+                </div>
+            </div>
+
+        <div class="fuel-type" id = "fuel-type">
+            <div><label for="fuel-type-gasoline">Fuel Type<span class="required">*</span></label></div>
+            <div class="radio-container" id = "container-fuel">
+                <input id="fuel-type-gasoline" name="fuel-type" type="radio" value="Gasoline" required></input>
+                <label for="fuel-type-gasoline">Gasoline</label>
+                <input id="fuel-type-diesel" name="fuel-type" type="radio" value="Diesel" required></input>
+                <label for="fuel-type-diesel">Diesel</label>
+                <input id="fuel-type-hybrid" name="fuel-type" type="radio" value="Hybrid" required></input>
+                <label for="fuel-type-hybrid">Hybrid</label>
+                <input id="fuel-type-electric" name="fuel-type" type="radio" value="Gasoline, Electric" required></input>
+                <label for="fuel-type-electric">Electric</label>
+            </div>
+        </div>
+
+
+
+
+                <div class="set" id = "find-btn-container">
+                    <div >
+                        <a onclick="checkValues()">
                             <span></span>
                             <span></span>
                             <span></span>
@@ -145,72 +162,17 @@
                     </div>
 
                 </div>
-            </footer>
+
+
         </div>
     </div>
     <br>
     <br>
     <div class="bar"></div>
     <br>
-    <div class = "find-results">
-        <div class = "content-card-area">
-            <div class = "content-card" id = "brabus-XLP">
-                <a><div class = "car-pic"><div class = "car-img"></div></div></a>
-                <a><div class = "car-name"><h2>Brabus XLP</h2></div></a>
-                <hr/>
-                <a><div class = "car-info"><p>R1 485 000</p></div></a>
-                <a><div class = "car-info"><p>Fule Type: Petrol</p></div></a>
-                <a><div class = "car-info"><p>Acceleration 0-100km/h: 4.4s</p></div></a>
-                <a><div class = "car-info"><p>Gear box: Automatic</p></div></a>
-            </div>
-            <div class = "content-card" id = "brabus-rocket">
-                <a><div class = "car-pic"><div class = "car-img"></div></div></a>
-                <a><div class = "car-name"><h2>Brabus Rocket</h2></div></a>
-                <hr/>
-                <a><div class = "car-info"><p>R1 485 000</p></div></a>
-                <a><div class = "car-info"><p>Fule Type: Petrol</p></div></a>
-                <a><div class = "car-info"><p>Acceleration 0-100km/h: 4.1s</p></div></a>
-                <a><div class = "car-info"><p>Gear box: Automatic</p></div></a>
-            </div>
-            <div class = "content-card" id = "bmw-m2">
-                <a><div class = "car-pic"><div class = "car-img"></div></div></a>
-                <a><div class = "car-name"><h2>BMW M2 Coupe</h2></div></a>
-                <hr/>
-                <a><div class = "car-info"><p>R1 485 000</p></div></a>
-                <a><div class = "car-info"><p>Fule Type: Petrol</p></div></a>
-                <a><div class = "car-info"><p>Acceleration 0-100km/h: 4.1s</p></div></a>
-                <a><div class = "car-info"><p>Gear box: Automatic</p></div></a>
-            </div>
-        </div>
-        <div class = "content-card-area">
-            <div class = "content-card" id = "bmw-z4">
-                <a><div class = "car-pic" ><div class = "car-img"></div></div></a>
-                <a><div class = "car-name"><h2>BMW Z4</h2></div></a>
-                <hr/>
-                <a><div class = "car-info"><p>R985 000</p></div></a>
-                <a><div class = "car-info"><p>Fule Type: Petrol</p></div></a>
-                <a><div class = "car-info"><p>Acceleration 0-100km/h: 6.6s</p></div></a>
-                <a><div class = "car-info"><p>Gear box: Automatic</p></div></a>
-            </div>
-            <div class = "content-card" id = "tesla-m3">
-                <a><div class = "car-pic" ><div class = "car-img"></div></div></a>
-                <a><div class = "car-name"><h2>Tesla Model 3</h2></div></a>
-                <hr/>
-                <a><div class = "car-info"><p>R1 485 000</p></div></a>
-                <a><div class = "car-info"><p>Fule Type: Petrol</p></div></a>
-                <a><div class = "car-info"><p>Acceleration 0-100km/h: 4.1s</p></div></a>
-                <a><div class = "car-info"><p>Gear box: Automatic</p></div></a>
-            </div>
-            <div class = "content-card" id = "tesla-ss">
-                <a><div class = "car-pic"><div class = "car-img"></div></div></a>
-                <a><div class = "car-name"><h2>Tesla Model S</h2></div></a>
-                <hr/>
-                <a><div class = "car-info"><p>R1 485 000</p></div></a>
-                <a><div class = "car-info"><p>Fule Type: Petrol</p></div></a>
-                <a><div class = "car-info"><p>Acceleration 0-100km/h: 1.99s</p></div></a>
-                <a><div class = "car-info"><p>Gear box: Automatic</p></div></a>
-            </div>
-        </div>
+    <div class = "content-card-area">
+        <div id="loading-spinner" class="spinner"></div>
+
     </div>
 
 
@@ -244,7 +206,7 @@
     <br/>
 
 </div>
-
+<script src = "./js/findcar.js"></script>
 </body>
 
 </html>
