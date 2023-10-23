@@ -1,0 +1,363 @@
+.form-container {
+    width:50%;
+    margin-left:25%;
+    margin-right:25%;
+    margin-top:5%;
+    display: grid;
+    grid-template-areas: "left right";
+    max-width: 850px;
+}
+
+.left-container {
+    background: #807182;
+    background-image: url("../img/findCarForm.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow: hidden;
+    padding: 40px 0 0 0;
+    position: relative;
+    text-align: center;
+    width: 300px;
+    border-radius: 5px;
+    height: 554px;
+}
+
+.right-container {
+    background: black;
+    display: grid;
+    grid-template-columns: repeat(1,1fr);
+    grid-template-rows: repeat(6,1fr);
+    width: 500px;
+    border-radius: 5px;
+    height: 554px;
+}
+
+#form-heading {
+    font-size: 28px;
+    font-weight: 600;
+    color: white;
+    text-align: center;
+}
+
+#drive-selection2{
+    display: none;
+
+}
+
+#drive-selection{
+    display: flex;
+    flex-direction: column;
+}
+
+#drivewheels{
+    justify-content: left;
+    display: flex;
+    flex-direction: column;
+}
+
+/*set is the dropdown selection for each form element*/
+.right-container .set {
+    display: flex;
+    gap:50px;
+    margin: 10px 0;
+}
+
+.right-container select {
+    border: 1px solid rgba(0, 0, 0, .1);
+    border-radius: 4px;
+    height: 38px;
+    line-height: 38px;
+    padding-left: 5px;
+    width:190px;
+    color: #666666;
+    font-family: "Montserrat", sans-serif;
+    font-weight: bold;
+}
+
+.right-container select:hover{
+    cursor: pointer;
+}
+
+select option{
+    font-family: "Montserrat", sans-serif;
+    font-weight: bold;
+}
+
+.right-container label {
+    color: white;
+    margin-top:5px;
+}
+
+.right-container header {
+    padding: 40px;
+}
+
+.right-container .radio-container {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.right-container footer {
+    align-items: center;
+    background: black;
+    display: grid;
+    padding: 5px 40px;
+    align-content: center;
+    justify-content: center;
+    width: 400px;
+    height:90px;
+}
+
+.right-container footer button {
+    border: 1px solid rgba(0, 0, 0, .2);
+    height: 38px;
+    line-height: 38px;
+    width: 100px;
+    border-radius: 19px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.price-range label, .body-type label, .drive-type label, .door-num label, .transmission-type label, .fuel-type label{
+    display: block;
+    margin-bottom: 5px;
+    margin-top:10px;
+}
+
+.radio-container {
+    background: red;
+    border: 1px solid rgba(0, 0, 0, .1);
+    border-radius: 4px;
+    display: flex;
+    gap:10px;
+    padding: 5px;
+    width:180px;
+}
+
+.radio-container label:hover {
+    cursor: pointer;
+}
+
+
+#container-fuel {
+    background: red;
+    border: 1px solid rgba(0, 0, 0, .1);
+    border-radius: 4px;
+    display: flex;
+    gap:10px;
+    padding: 5px;
+    width:400px;
+    height:30px;
+}
+
+select{
+    padding: 5px;
+    background-color: black;
+}
+
+.radio-container label {
+    background: transparent;
+    border: 1px solid transparent;
+    border-radius: 2px;
+    display: inline-block;
+    height: 26px;
+    line-height: 26px;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    transition: 0.2s all ease-in-out;
+    width: 80px;
+    font-weight: bold;
+}
+.radio-container input[type="radio"] {
+    display: none;
+}
+.radio-container input[type="radio"]:checked + label {
+    background: white;
+    border: 1px solid rgba(0, 0, 0, .1);
+    color: #191717;
+    width:90px;
+    font-weight: bold;
+}
+
+.set  a {
+    position: relative;
+    display: inline-block;
+    padding: 10px 20px;
+    color: red;
+    font-size: 16px;
+    text-decoration: none;
+    text-transform: uppercase;
+    overflow: hidden;
+    transition: .5s;
+    margin-top: 40px;
+    letter-spacing: 4px
+}
+.set a:hover {
+    background: red;
+    color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 5px red,
+    0 0 25px red,
+    0 0 50px red,
+    0 0 100px red;
+}
+.set a span {
+    position: absolute;
+    display: block;
+}
+.set a span:nth-child(1) {
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, red);
+    animation: btn-anim1 1s linear infinite;
+}
+@keyframes btn-anim1 {
+    0% {
+        left: -100%;
+    }
+    50%,100% {
+        left: 100%;
+    }
+}
+.set a span:nth-child(2) {
+    top: -100%;
+    right: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(180deg, transparent,red);
+    animation: btn-anim2 1s linear infinite;
+    animation-delay: .25s
+}
+@keyframes btn-anim2 {
+    0% {
+        top: -100%;
+    }
+    50%,100% {
+        top: 100%;
+    }
+}
+.set a span:nth-child(3) {
+    bottom: 0;
+    right: -100%;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(270deg, transparent, red);
+    animation: btn-anim3 1s linear infinite;
+    animation-delay: .5s
+}
+@keyframes btn-anim3 {
+    0% {
+        right: -100%;
+    }
+    50%,100% {
+        right: 100%;
+    }
+}
+.set a span:nth-child(4) {
+    bottom: -100%;
+    left: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(360deg, transparent, red);
+    animation: btn-anim4 1s linear infinite;
+    animation-delay: .75s
+}
+@keyframes btn-anim4 {
+    0% {
+        bottom: -100%;
+    }
+    50%,100% {
+        bottom: 100%;
+    }
+}
+span.required {
+    color: red;
+}
+
+header{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(5,1fr);
+    background-color: #666666;
+}
+
+#form-heading-div
+{
+
+}
+
+#drive-selection{
+
+    width:200px;
+}
+
+.fuel-type{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#container-fuel{
+    background-color: #FF0000;
+}
+
+#transmission-container{
+    width:200px;
+    height: fit-content;
+}
+#fuzzy-container{
+    width:200px;
+
+
+    height: fit-content;
+}
+
+
+#drive-wheels{
+    width:200px;
+
+}
+#body-type{
+    width:200px;
+}
+#fuel-type{
+
+}
+
+#find-btn-container{
+
+    width:100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#drive-selection{
+
+
+    width: 100%;
+}
+
+#body-seat-container{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap:30px;
+}
+#transmission-fuzzy-container{
+   display: flex;
+    flex-direction: row;
+    gap:30px;
+    align-items: center;
+}
+#trans-fuz-container{
+    display: grid;
+    flex-direction: row;
+    grid-template-columns: 1fr 1fr;
+    gap:30px;
+    width: 100%;
+    justify-content: space-between;
+}

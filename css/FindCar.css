@@ -8,6 +8,7 @@ body{
 a{
     text-decoration: none;
     color: inherit;
+    cursor: pointer;
 }
 
 /*Content area*/
@@ -34,317 +35,37 @@ a{
 
 }
 
-.find-container {
-    width:50%;
-    margin-left:25%;
-    margin-right:25%;
-    margin-top:5%;
-    display: grid;
-    grid-template-areas: "left right";
-    max-width: 850px;
-}
-
-.left-container {
-    background: #807182;
-    background-image: url("../img/findCarForm.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    overflow: hidden;
-    padding: 40px 0 0 0;
-    position: relative;
-    text-align: center;
-    width: 300px;
-    border-radius: 5px;
-}
-
-.right-container {
-    background: #191717;
-    display: grid;
-    grid-template-areas: "." ".";
-    width: 500px;
-    border-radius: 5px;
-
-   /* box-shadow: 0 0px 8px 6px grey;*/
-}
-
-.right-container h1:nth-of-type(1) {
-    color: rgba(0, 0, 0, .8);
-    font-size: 28px;
-    font-weight: 600;
-    color: white;
-    text-align: center;
-}
-
-.right-container .set {
-    display: flex;
-    gap:50px;
-
-    /*justify-content: center;*/
-    margin: 10px 0;
-}
-
-.right-container select {
-    border: 1px solid rgba(0, 0, 0, .1);
-    border-radius: 4px;
-    height: 38px;
-    line-height: 38px;
-    padding-left: 5px;
-    width:190px;
-    color: #666666;
-    font-family: "Montserrat", sans-serif;
-    font-weight: bold;
-}
-
-select option{
-    font-family: "Montserrat", sans-serif;
-    font-weight: bold;
-}
-
-.right-container label {
-    color: white;
-    margin-top:5px;
-}
-
-.right-container header {
-    padding: 40px;
-}
-
-
-.right-container .pets-weight .radio-container {
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
-}
-.right-container footer {
-    align-items: center;
-    background: #191717;
-    display: grid;
-    padding: 5px 40px;
-    align-content: center;
-    justify-content: center;
-    width: 400px;
-    height:90px;
-
-}
-.right-container footer button {
-    border: 1px solid rgba(0, 0, 0, .2);
-    height: 38px;
-    line-height: 38px;
-    width: 100px;
-    border-radius: 19px;
-    font-family: 'Montserrat', sans-serif;
-}
-
-.right-container footer #next {
-    background: red;
-    border: 1px solid transparent;
-    color: #fff;
-    font-size: 16px;
-
-}
-.right-container footer #next:hover {
-    background: white;
-    color: #191717;
-    cursor: pointer;
-}
-.price-range label, .body-type label, .drive-type label, .door-num label, .transmission-type label, .pets-weight label .fuel-type label{
-    display: block;
-    margin-bottom: 5px;
-    margin-top:10px;
-}
-
-.radio-container {
-    background: red;
-    border: 1px solid rgba(0, 0, 0, .1);
-    border-radius: 4px;
-    display: flex;
-    gap:10px;
-    padding: 5px;
-    width:180px;
-}
-
-.fuel-type > .radio-container {
-    background: red;
-    border: 1px solid rgba(0, 0, 0, .1);
-    border-radius: 4px;
-    display: flex;
-    gap:10px;
-    padding: 5px;
-    width:400px;
-}
-
-.radio-container label {
-    background: transparent;
-    border: 1px solid transparent;
-    border-radius: 2px;
-    display: inline-block;
-    height: 26px;
-    line-height: 26px;
+/*Content area*/
+.content{
+    width:100%;
+    background-color: black;
     margin: 0;
-    padding: 0;
-    text-align: center;
-    transition: 0.2s all ease-in-out;
-    width: 80px;
-    font-weight: bold;
-}
-.radio-container input[type="radio"] {
-    display: none;
-}
-.radio-container input[type="radio"]:checked + label {
-    background: white;
-    border: 1px solid rgba(0, 0, 0, .1);
-    color: #191717;
-    width:90px;
-    font-weight: bold;
-}
-
-#next a{
-    text-decoration: none;
-    color: white;
-}
-
-#next a:hover{
-    text-decoration: none;
-    color: #191717;
-}
-
-.set  a {
-    position: relative;
-    display: inline-block;
-    padding: 10px 20px;
-    color: red;
-    font-size: 16px;
-    text-decoration: none;
-    text-transform: uppercase;
-    overflow: hidden;
-    transition: .5s;
-    margin-top: 40px;
-    letter-spacing: 4px
-}
-
-.set a:hover {
-    background: red;
-    color: #fff;
-    border-radius: 5px;
-    box-shadow: 0 0 5px red,
-    0 0 25px red,
-    0 0 50px red,
-    0 0 100px red;
-}
-
-.set a span {
-    position: absolute;
-    display: block;
-}
-
-.set a span:nth-child(1) {
-    top: 0;
-    left: -100%;
-    width: 100%;
-    height: 2px;
-    background: linear-gradient(90deg, transparent, red);
-    animation: btn-anim1 1s linear infinite;
-}
-
-@keyframes btn-anim1 {
-    0% {
-        left: -100%;
-    }
-    50%,100% {
-        left: 100%;
-    }
-}
-
-.set a span:nth-child(2) {
-    top: -100%;
-    right: 0;
-    width: 2px;
-    height: 100%;
-    background: linear-gradient(180deg, transparent,red);
-    animation: btn-anim2 1s linear infinite;
-    animation-delay: .25s
-}
-
-@keyframes btn-anim2 {
-    0% {
-        top: -100%;
-    }
-    50%,100% {
-        top: 100%;
-    }
-}
-
-.set a span:nth-child(3) {
-    bottom: 0;
-    right: -100%;
-    width: 100%;
-    height: 2px;
-    background: linear-gradient(270deg, transparent, red);
-    animation: btn-anim3 1s linear infinite;
-    animation-delay: .5s
-}
-
-@keyframes btn-anim3 {
-    0% {
-        right: -100%;
-    }
-    50%,100% {
-        right: 100%;
-    }
-}
-
-.set a span:nth-child(4) {
-    bottom: -100%;
-    left: 0;
-    width: 2px;
-    height: 100%;
-    background: linear-gradient(360deg, transparent, red);
-    animation: btn-anim4 1s linear infinite;
-    animation-delay: .75s
-}
-
-@keyframes btn-anim4 {
-    0% {
-        bottom: -100%;
-    }
-    50%,100% {
-        bottom: 100%;
-    }
-}
-
-span.required {
-    color: red;
+    height:fit-content;
+    padding-bottom: 20px;
+    align-items: center;
+    justify-content: center;
 }
 
 .content-card-area{
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
     gap:40px;
-    padding-left: 5%;
-    padding-right: 5%;
-    margin-bottom: 2%;
+    margin:5%;
+    display: none;
     /*flex-wrap: wrap;*/
-
-
 }
-
-
 
 /*used to display each brand*/
 .content-card{
-    width:30%;
+    display: flex;
+    flex-direction: column;
     background-color: white;
     box-shadow: 0 4px 8px 6px grey;
     border-bottom-width: 33px;
     border-color: black;
-    padding-top: 1%;
-    padding-bottom: 30px;
-    padding-right: 20px;
-    padding-left: 20px;
-    text-align: center;
+    justify-content: center;
+    align-items: center;
     height:fit-content;
-    display: block;
-    max-width: 30%;
-    min-width: 20%;
 }
 
 
@@ -358,9 +79,9 @@ span.required {
 /*diplay div for the brand image to ensure no movement od the brand name txt when different logo dimensions are loaded*/
 .car-pic{
     background-repeat: no-repeat;
-    width:100%;
+    width:95%;
     height:40%;
-    background-color: white;
+    background-color: pink;
     max-width: 100%; /* Shrink the image to fit the width of the container */
     background-size: cover; /* Cover the entire div with the background image */
     background-position: center; /* Center the background image */
@@ -387,7 +108,6 @@ span.required {
     max-width: 100%; /* Shrink the image to fit the width of the container */
     background-position: center; /* Center the background image */
 }
-
 /*these are the different images for each card to be changed later into some js code to dynamically load*/
 #brabus-XLP .car-img{
     background-image: url("../img/cars/Brabus_900_XLP.jpg");
@@ -433,14 +153,6 @@ span.required {
         margin-bottom: 3px;
     }
     .content-card-area{
-        display: flex;
-        gap:20px;
-        padding-left: 1%;
-        padding-right: 1%;
-        margin-bottom: 2%;
-        align-items: center;
-        justify-content: center;
-        background-color: black;
     }
 
     /*used to display each brand*/
@@ -480,14 +192,7 @@ span.required {
         margin-bottom: 3px;
     }
     .content-card-area{
-        display: flex;
-        gap:20px;
-        padding-left: 1%;
-        padding-right: 1%;
-        margin-bottom: 2%;
-        align-items: center;
-        justify-content: center;
-        background-color: black;
+
     }
 
     /*used to display each brand*/
@@ -526,14 +231,7 @@ span.required {
 
 @media (max-width: 900px) and (min-width: 660px){
     .content-card-area{
-        display: flex;
-        gap:20px;
-        padding-left: 1%;
-        padding-right: 1%;
-        margin-bottom: 2%;
-        align-items: center;
-        justify-content: center;
-        background-color: black;
+
     }
 
     /*used to display each brand*/
@@ -622,4 +320,22 @@ span.required {
         margin-bottom: 3px;
 
     }
+}
+
+/*loading spinner while waiting for data to load in*/
+.spinner {
+    border: 16px solid White;
+    border-radius: 50%;
+    border-top: 16px solid RoyalBlue;
+    border-bottom: 16px solid Red;
+    width: 70px;
+    height: 70px;
+    -webkit-animation: spin 2s linear infinite; /* Safari */
+    animation: spin 2s linear infinite;
+    margin: auto;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
 }

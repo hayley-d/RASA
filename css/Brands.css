@@ -49,11 +49,14 @@ a{
 }
 
 .content-card .row-1{
-    position: relative;
+    /*position: relative;*/
     width:95%;
     height:250px;
     padding:10px;
-    background-color: white;
+    background-color: pink;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     /*min-height: 200px;
     min-width: 200px;*/
 
@@ -62,8 +65,10 @@ a{
 .content-card .row-2{
     width: 100%;
     height:fit-content;
-
-    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent;
     align-content: center;
 }
 
@@ -72,27 +77,29 @@ a{
 .content-card a{
     text-decoration: none;
     color: inherit;
+    background-color: pink;
 }
 
 /*diplay div for the brand image to ensure no movement od the brand name txt when different logo dimensions are loaded*/
 .brand-pic{
-    width: 100%;
-    height:100%
+    width: 90%;
+    height:100%;
+
 }
 
 .brand-name{
     font-size: xx-large;
-   position: relative;
+  /* position: relative;*/
  }
 
  /*this is used to display the brand's logo and name, by using a div to display the image it has optimal loading and provides better control*/
 /*ensures each logo of varying width and height is displayed within the same dimenstions*/
 .brand-logo{
     background-repeat: no-repeat;
-    width:100%;
+    width:90%;
     height:220px;
     background-size: contain; /* Fit the background image within the div */
-    background-color: white;
+
     background-position: center; /* Center the background image */
     max-height: 250px;
 }
@@ -277,4 +284,22 @@ a{
     .brand-name{
         font-size: large;
     }
+}
+
+/*loading spinner while wating for api content*/
+.spinner {
+    border: 16px solid White;
+    border-radius: 50%;
+    border-top: 16px solid RoyalBlue;
+    border-bottom: 16px solid Red;
+    width: 180px;
+    height: 180px;
+    -webkit-animation: spin 2s linear infinite; /* Safari */
+    animation: spin 2s linear infinite;
+    margin: auto;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
 }
