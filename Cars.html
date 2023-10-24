@@ -23,7 +23,7 @@
 
     <!--used div to store image since css enables more control over styling and for optimal loading-->
     <div class = "top-header">
-        <button id = "login-btn"><a href = "underConstruction.html"><h2>Login</h2></a></button>
+        <button id = "login-btn"><a href = "Login.html"><h2>Login</h2></a></button>
         <div class = "logo">
             <div id = "logoImg"></div>
         </div>
@@ -123,12 +123,12 @@
         <div class = "dropdown-btn">
             <button id="sort-btn">Sort</button>
             <div class = "sort-options">
-                <button onclick="ascYear()">Year (ASC)</button>
-                <button onclick="decYear()">Year (DEC)</button>
-                <button onclick="ascName()">Name (ASC)</button>
-                <button onclick="decName()">Name (DEC)</button>
-                <button onclick="ascSpeed()">Speed (ASC)</button>
-                <button onclick="decSpeed()">Speed (DEC)</button>
+                <button  class = "options-btn" onclick="ascYear()">Year (ASC)</button>
+                <button class = "options-btn" onclick="decYear()">Year (DEC)</button>
+                <button class = "options-btn" onclick="ascName()">Name (ASC)</button>
+                <button class = "options-btn" onclick="decName()">Name (DEC)</button>
+                <button class = "options-btn" onclick="ascSpeed()">Speed (ASC)</button>
+                <button class = "options-btn" onclick="decSpeed()">Speed (DEC)</button>
             </div>
         </div>
 
@@ -138,114 +138,6 @@
     </div>
     <div class = "content-card-area">
         <div id="loading-spinner" class="spinner"></div>
-        <!--<div class = "content-card" id = "brabus-XLP">
-            <div class = "car-pic" ><div class = "car-img"></div></div>
-            <div class = "car-name"><h2>BMW Z4</h2></div>
-            <hr/>
-            <div class = "car-info"><p>R985 000</p></div>
-            <div class = "car-info"><p>Fule Type: Petrol</p></div>
-            <div class = "car-info"><p>Acceleration 0-100km/h: 6.6s</p></div>
-            <div class = "car-info"><p>Gear box: Automatic</p></div>
-        </div>
-        <div class = "content-card" id = "brabus-rocket">
-            <div class = "car-pic" ><div class = "car-img"></div></div>
-            <div class = "car-name"><h2>BMW Z4</h2></div>
-            <hr/>
-            <div class = "car-info"><p>R985 000</p></div>
-            <div class = "car-info"><p>Fule Type: Petrol</p></div>
-            <div class = "car-info"><p>Acceleration 0-100km/h: 6.6s</p></div>
-            <div class = "car-info"><p>Gear box: Automatic</p></div>
-        </div>
-        <div class = "content-card" id = "bmw-m2">
-            <div class = "car-pic" ><div class = "car-img"></div></div>
-            <div class = "car-name"><h2>BMW Z4</h2></div>
-            <hr/>
-            <div class = "car-info"><p>R985 000</p></div>
-            <div class = "car-info"><p>Fule Type: Petrol</p></div>
-            <div class = "car-info"><p>Acceleration 0-100km/h: 6.6s</p></div>
-            <div class = "car-info"><p>Gear box: Automatic</p></div>
-        </div>
-        <div class = "content-card" id = "bmw-z4">
-            <div class = "car-pic" ><div class = "car-img"></div></div>
-            <div class = "car-name"><h2>BMW Z4</h2></div>
-            <hr/>
-            <div class = "car-info"><p>R985 000</p></div>
-            <div class = "car-info"><p>Fule Type: Petrol</p></div>
-            <div class = "car-info"><p>Acceleration 0-100km/h: 6.6s</p></div>
-            <div class = "car-info"><p>Gear box: Automatic</p></div>
-        </div>
-        <div class = "content-card" id = "tesla-m3">
-            <div class = "car-pic" ><div class = "car-img"></div></div>
-            <div class = "car-name"><h2>BMW Z4</h2></div>
-            <hr/>
-            <div class = "car-info"><p>R985 000</p></div>
-            <div class = "car-info"><p>Fule Type: Petrol</p></div>
-            <div class = "car-info"><p>Acceleration 0-100km/h: 6.6s</p></div>
-            <div class = "car-info"><p>Gear box: Automatic</p></div>
-        </div>
-        <div class = "content-card" id = "tesla-ss">
-            <div class = "car-pic" ><div class = "car-img"></div></div>
-            <div class = "car-name"><h2>BMW Z4</h2></div>
-            <hr/>
-            <div class = "car-info"><p>R985 000</p></div>
-            <div class = "car-info"><p>Fule Type: Petrol</p></div>
-            <div class = "car-info"><p>Acceleration 0-100km/h: 6.6s</p></div>
-            <div class = "car-info"><p>Gear box: Automatic</p></div>
-        </div>
-        <div class = "content-card" id = "porsche-911">
-            <div class = "car-pic" ><div class = "car-img"></div></div>
-            <div class = "car-name"><h2>BMW Z4</h2></div>
-            <hr/>
-            <div class = "car-info"><p>R985 000</p></div>
-            <div class = "car-info"><p>Fule Type: Petrol</p></div>
-            <div class = "car-info"><p>Acceleration 0-100km/h: 6.6s</p></div>
-            <div class = "car-info"><p>Gear box: Automatic</p></div>
-        </div>
-        <div class = "content-card" id = "porsche-cayenne">
-            <div class = "car-pic" ><div class = "car-img"></div></div>
-            <div class = "car-name"><h2>BMW Z4</h2></div>
-            <hr/>
-            <div class = "car-info"><p>R985 000</p></div>
-            <div class = "car-info"><p>Fule Type: Petrol</p></div>
-            <div class = "car-info"><p>Acceleration 0-100km/h: 6.6s</p></div>
-            <div class = "car-info"><p>Gear box: Automatic</p></div>
-        </div>
-        <div class = "content-card" id = "alpha-giulia">
-            <div class = "car-pic" ><div class = "car-img"></div></div>
-            <div class = "car-name"><h2>BMW Z4</h2></div>
-            <hr/>
-            <div class = "car-info"><p>R985 000</p></div>
-            <div class = "car-info"><p>Fule Type: Petrol</p></div>
-            <div class = "car-info"><p>Acceleration 0-100km/h: 6.6s</p></div>
-            <div class = "car-info"><p>Gear box: Automatic</p></div>
-        </div>
-        <div class = "content-card" id = "alpha-tonale">
-            <div class = "car-pic" ><div class = "car-img"></div></div>
-            <div class = "car-name"><h2>BMW Z4</h2></div>
-            <hr/>
-            <div class = "car-info"><p>R985 000</p></div>
-            <div class = "car-info"><p>Fule Type: Petrol</p></div>
-            <div class = "car-info"><p>Acceleration 0-100km/h: 6.6s</p></div>
-            <div class = "car-info"><p>Gear box: Automatic</p></div>
-        </div>
-        <div class = "content-card" id = "mc_artura">
-            <div class = "car-pic" ><div class = "car-img"></div></div>
-            <div class = "car-name"><h2>BMW Z4</h2></div>
-            <hr/>
-            <div class = "car-info"><p>R985 000</p></div>
-            <div class = "car-info"><p>Fule Type: Petrol</p></div>
-            <div class = "car-info"><p>Acceleration 0-100km/h: 6.6s</p></div>
-            <div class = "car-info"><p>Gear box: Automatic</p></div>
-        </div>
-        <div class = "content-card" id = "mc_gt">
-            <div class = "car-pic" ><div class = "car-img"></div></div>
-            <div class = "car-name"><h2>BMW Z4</h2></div>
-            <hr/>
-            <div class = "car-info"><p>R985 000</p></div>
-            <div class = "car-info"><p>Fule Type: Petrol</p></div>
-            <div class = "car-info"><p>Acceleration 0-100km/h: 6.6s</p></div>
-            <div class = "car-info"><p>Gear box: Automatic</p></div>
-        </div>-->
     </div>
 
 
@@ -271,7 +163,7 @@
             <a><p><span>E </span>sales@rasacars.co.za</p></a>
         </div>
 
-        <button class = "mode-btn"><a><h3>Light Mode</h3></a></button>
+        <button class = "mode-btn"><a onclick="modeChangeCars()"><h3>Light Mode</h3></a></button>
     </div>
     <!--mock copyright data-->
     <br/>
@@ -281,6 +173,7 @@
 
 </div>
 <script src = "./js/cars.js"></script>
+<script src = "./js/lightMode.js">checkCars();</script>
 </body>
 
 </html>

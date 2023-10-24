@@ -61,7 +61,7 @@
       width:180px;
     }
 
-    .login-box {
+    .signUp-box {
       position: absolute;
       top: 50%;
       left: 50%;
@@ -75,18 +75,18 @@
       color: grey;
     }
 
-    .login-box h2 {
+    .signUp-box h2 {
       margin: 0 0 30px;
       padding: 0;
       color: #fff;
       text-align: center;
     }
 
-    .login-box .user-box {
+    .signUp-box .user-box {
       position: relative;
     }
 
-    .login-box .user-box input {
+    .signUp-box .user-box input {
       width: 100%;
       padding: 10px 0;
       font-size: 16px;
@@ -97,7 +97,7 @@
       outline: none;
       background: transparent;
     }
-    .login-box .user-box label {
+    .signUp-box .user-box label {
       position: absolute;
       top:0;
       left: 0;
@@ -108,16 +108,16 @@
       transition: .5s;
     }
 
-    .login-box .user-box input:focus ~ label,
-    .login-box .user-box input:valid ~ label {
+    .signUp-box .user-box input:focus ~ label,
+    .signUp-box .user-box input:valid ~ label {
       top: -20px;
       left: 0;
       color: mediumblue;
       font-size: 16px;
-  font-weight: bold;
+      font-weight: bold;
     }
 
-    .login-box form a {
+    .signUp-box form a {
       position: relative;
       display: inline-block;
       padding: 10px 20px;
@@ -131,7 +131,7 @@
       letter-spacing: 4px
     }
 
-    .login-box a:hover {
+    .signUp-box a:hover {
       background: mediumblue;
       color: #fff;
       border-radius: 5px;
@@ -142,12 +142,13 @@
       cursor: pointer;
     }
 
-    .login-box a span {
+    .signUp-box a span {
       position: absolute;
       display: block;
+
     }
 
-    .login-box a span:nth-child(1) {
+    .signUp-box a span:nth-child(1) {
       top: 0;
       left: -100%;
       width: 100%;
@@ -165,7 +166,7 @@
       }
     }
 
-    .login-box a span:nth-child(2) {
+    .signUp-box a span:nth-child(2) {
       top: -100%;
       right: 0;
       width: 2px;
@@ -184,7 +185,7 @@
       }
     }
 
-    .login-box a span:nth-child(3) {
+    .signUp-box a span:nth-child(3) {
       bottom: 0;
       right: -100%;
       width: 100%;
@@ -203,7 +204,7 @@
       }
     }
 
-    .login-box a span:nth-child(4) {
+    .signUp-box a span:nth-child(4) {
       bottom: -100%;
       left: 0;
       width: 2px;
@@ -227,21 +228,33 @@
 <body>
 <div class = "header">
   <div><button class = "back-btn" ><a href="Cars.html">Back</a></button></div>
-  <div><button class = "back-btn" id = "create-btn"><a href="Signup.html">Create an Account</a></button></div>
+  <div><button class = "back-btn" id = "create-btn"><a href="Login.html">Login</a></button></div>
 </div>
 
-<div class="login-box">
-  <h2>Login</h2>
+<div class="signUp-box">
+  <h2>Create Account</h2>
   <form>
     <div class="user-box">
-      <input type="text" name="username" required="">
-      <label>Username</label>
+      <input type="text" name="name" required="">
+      <label>Name</label>
+    </div>
+    <div class="user-box">
+      <input type="text" name="surname" required="">
+      <label>Surname</label>
+    </div>
+    <div class="user-box">
+      <input type="email" name="email" required="">
+      <label>Email</label>
     </div>
     <div class="user-box">
       <input type="password" name="password" required="">
       <label>Password</label>
     </div>
-    <a onclick="checkInput()">
+    <div class="user-box">
+      <input type="password" name="conf-password" required="">
+      <label>Confirm Password</label>
+    </div>
+    <a onclick="validateInformation()">
       <span></span>
       <span></span>
       <span></span>
@@ -250,20 +263,61 @@
     </a>
   </form>
   <script>
-    function checkInput()
+    function validateInformation()
     {
-      const username = document.getElementsByName("username")[0].value;
-      const password = document.getElementsByName("password")[0].value;
+      var name = document.getElementsByName("name")[0].value;
+      var surname = document.getElementsByName("surname")[0].value;
+      var email = document.getElementsByName("email")[0].value;
+      var password = document.getElementsByName("password")[0].value;
+      var confPassword = document.getElementsByName("conf-password")[0].value;
 
-      if(username === "" || password === ""){
-        alert("Please enter all fields.")
+      if(name === "" || surname === "" || email === "" || password ==="" || confPassword === "")
+      {
+        alert("Please fill in all fields.")
       }
       else{
-        //check database for login details
-        // Redirect to cars.html
-        window.location.href = 'cars.html';
+        //all data is filled in
+        //check if passwords match
+        if(password !== confPassword)
+        {
+          alert("Passwords do not match.")
+        }
+        else{
+          //part before @ contains letters, numbers, dots, _, % and +
+          //must contain an @
+          /*must be a dot followed by at least two letters*/
+          const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+          if(!emailRegex.test(email)){
+            //email is invalid
+            alert("Email is invalid.")
+          }
+          else{
+            createUser();
+          }
+        }
       }
     }
+
+    function createUser()
+    {
+      //vlaidation is done
+      //create a new user
+      var name = document.getElementsByName("name")[0].value;
+      var surname = document.getElementsByName("surname")[0].value;
+      var email = document.getElementsByName("email")[0].value;
+      var password = document.getElementsByName("password")[0].value;
+
+      const user = {
+        name: name,
+        surname: surname,
+        email: email,
+        password: password
+      }
+
+      // Redirect to cars.html
+      window.location.href = 'cars.html';
+    }
+
   </script>
 </div>
 
