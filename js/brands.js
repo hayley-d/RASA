@@ -32,9 +32,6 @@ function ApiCall(brandName, callback) {
 
     xhr.open("GET", url, true);
 
-    // Set the Content-Type header BEFORE sending the request
-    xhr.setRequestHeader("Content-Type", "application/json");
-
     xhr.onreadystatechange = function () {
         if (xhr.readyState === 4) {
             if (xhr.status === 200) {
@@ -69,6 +66,7 @@ function callApiAndStoreUrl(brandName) {
         // Check if all requests are completed
         if (Object.keys(brandImageMap).length  === brands.length) {
             console.log("image urls have been loaded.")
+
             processData(brandImageMap);
         }
     });
@@ -80,6 +78,7 @@ brands.forEach(callApiAndStoreUrl);
 /*function creates new brand card*/
 function brandCard(imageUrl,brandName)
 {
+    console.log(imageUrl + " for " + brandName)
     /*create the card*/
     var card = document.createElement('div');
     card.classList.add("content-card");

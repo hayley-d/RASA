@@ -2,7 +2,7 @@
 // Define the CORS Anywhere proxy URL
 const corsProxyUrl = "https://cors-anywhere.herokuapp.com/";
 
-const apikey = "a9198b68355f78830054c31a39916b7f"
+const apikey = "jtNHItJM5pkouGLf"
 const studentNum = "u21528790";
 //array of brand names
 const brands = ["Alfa Romeo", "Aston Martin", "Audi", "AC","BMW","Bugatti","Ferrari","Genesis","Jaguar","Lamborghini","Maybach","Mercedes-Benz","Mini","Porsche","Rolls-Royce"]
@@ -66,12 +66,10 @@ function ApiCallImage(model,brandName, callback) {
 
     xhr.open("GET", url, true);
 
-    // Set the Content-Type header BEFORE sending the request
-    xhr.setRequestHeader("Content-Type", "application/json");
+    
 
     xhr.onreadystatechange = function () {
-        if (xhr.readyState === 4) {
-            if (xhr.status === 200) {
+        if (xhr.readyState === 4 && xhr.status === 200) {
                 var responseData = xhr.responseText;
                 callback(responseData); // Call the callback function with the response data
             } else {
@@ -79,7 +77,7 @@ function ApiCallImage(model,brandName, callback) {
                 console.error("Request failed with status:", xhr.status);
                 callback(defaultUrl); // Call the callback function with the default URL
             }
-        }
+
     };
 
     // Send the request to the API
@@ -95,36 +93,27 @@ function ApiCallImage(model,brandName, callback) {
 function ApiCallModel(brandName, callback) {
     const defaultUrl = "https://dealeraccelerate-all.s3.amazonaws.com/fastlane/marketing_assets/428/90020_a1909487_v2.jpg";
     var xhr = new XMLHttpRequest();
-    var url =  "https://wheatley.cs.up.ac.za/api/";
+    var url =  "../api2.php";
     var params = {
-        studentnum:`${studentNum}`,
         type:`GetAllCars`,
         limit:100,
         apikey:`${apikey}`,
         fuzzy: false,
-        search:{
-            make:`${brandName}`
-
-        },
+        search:{make:`${brandName}`},
         return:[
             "make","model","year_from","number_of_seats","engine_type","drive_wheels","max_speed_km_per_h","transmission"
         ]
     };
+
     var requestBody = JSON.stringify(params);
-
-    // Append the parameters to the URL
-    url += "?" + params;
-
-    xhr.open("POST", url, true);
-
-    // Set the Content-Type header BEFORE sending the request
-    xhr.setRequestHeader("Content-Type", "application/json");
 
     xhr.onreadystatechange = function () {
         if (xhr.readyState === 4) {
             if (xhr.status === 200) {
                 /*returns an array of objects*/
+                console.log(xhr.responseText);
                 var responseData = JSON.parse(xhr.responseText);
+
                 callback(responseData); // Call the callback function with the response data
             } else {
                 // Handle an error (e.g., display an error message)
@@ -133,6 +122,11 @@ function ApiCallModel(brandName, callback) {
             }
         }
     };
+
+    xhr.open("POST", url, true);
+
+    // Set the Content-Type header BEFORE sending the request
+    xhr.setRequestHeader("Content-Type", "application/json");
 
     // Send the request to the API
     xhr.send(requestBody);
