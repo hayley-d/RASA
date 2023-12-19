@@ -1,5 +1,5 @@
 /*u21528790 Hayley Dodkins*/
-const apikey = "a9198b68355f78830054c31a39916b7f"
+const apikey = "jtNHItJM5pkouGLf"
 const studentNum = "u21528790";
 
 /*brands array*/
@@ -134,9 +134,8 @@ function ApiCallImage(model,brandName, callback) {
 function ApiCallModel(brandName, callback) {
     const defaultUrl = "https://dealeraccelerate-all.s3.amazonaws.com/fastlane/marketing_assets/428/90020_a1909487_v2.jpg";
     var xhr = new XMLHttpRequest();
-    var url =  "https://wheatley.cs.up.ac.za/api/";
+    var url =  "../api2.php";
     var params = {
-        studentnum:`${studentNum}`,
         type:`GetAllCars`,
         limit:100,
         apikey:`${apikey}`,
