@@ -35,6 +35,8 @@ class DatabaseSingleton {
 }
 global $db;
 $db = DatabaseSingleton::getInstance();
+
+$GLOBALS['db'] = $db;
     // To use the singleton instance
    // $db = DatabaseSingleton::getInstance();
     // $db is now the MySQLi connection instance
